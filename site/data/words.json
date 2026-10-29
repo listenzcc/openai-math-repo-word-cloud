@@ -1,0 +1,5658 @@
+{
+ "generated_at": "2026-10-29",
+ "stats": {
+  "manuscripts": 751,
+  "families": 373,
+  "terms": 1496,
+  "unmapped_dirs": 31,
+  "snapshot": "2026-10-29",
+  "discipline_sizes": {
+   "Mathematical physics": 848,
+   "Topology": 298,
+   "Dynamical systems and ergodic theory": 242,
+   "Probability and statistical mechanics": 1390,
+   "Mathematical logic": 84,
+   "Combinatorics": 532,
+   "Differential geometry": 655,
+   "Algebra": 319,
+   "Algebraic and complex geometry": 1056,
+   "Operator algebras": 374,
+   "Partial differential equations": 383,
+   "Theoretical computer science": 961,
+   "Convex and metric geometry": 341,
+   "Functional analysis": 229,
+   "Group theory": 225,
+   "Number theory": 642,
+   "Unclassified": 406,
+   "Real and complex analysis": 315
+  }
+ },
+ "overall": [
+  {
+   "word": "conjecture",
+   "count": 163,
+   "cat": "Algebra"
+  },
+  {
+   "word": "dimension",
+   "count": 96,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "bound",
+   "count": 92,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "finite",
+   "count": 84,
+   "cat": "Topology"
+  },
+  {
+   "word": "counterexample",
+   "count": 76,
+   "cat": "Algebra"
+  },
+  {
+   "word": "three",
+   "count": 69,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "two",
+   "count": 68,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "uniform",
+   "count": 64,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "model",
+   "count": 64,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "group",
+   "count": 57,
+   "cat": "Group theory"
+  },
+  {
+   "word": "one",
+   "count": 54,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "critical",
+   "count": 53,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "four",
+   "count": 52,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "planar",
+   "count": 50,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "free",
+   "count": 49,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "polynomial",
+   "count": 48,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "prime",
+   "count": 47,
+   "cat": "Number theory"
+  },
+  {
+   "word": "space",
+   "count": 47,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "dimensional",
+   "count": 46,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "time",
+   "count": 44,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "positive",
+   "count": 44,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "inequality",
+   "count": 42,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "every",
+   "count": 42,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "compact",
+   "count": 42,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "log",
+   "count": 41,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "field",
+   "count": 40,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "limit",
+   "count": 40,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "bounded",
+   "count": 38,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "sharp",
+   "count": 38,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "number",
+   "count": 37,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "metric",
+   "count": 37,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "random",
+   "count": 36,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "lattice",
+   "count": 36,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "power",
+   "count": 35,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "logarithmic",
+   "count": 34,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "exact",
+   "count": 34,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "fixed",
+   "count": 33,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "smooth",
+   "count": 32,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "graphs",
+   "count": 32,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "manifolds",
+   "count": 32,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "without",
+   "count": 30,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "rational",
+   "count": 30,
+   "cat": "Unclassified"
+  },
+  {
+   "word": "weak",
+   "count": 30,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "threshold",
+   "count": 28,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "problem",
+   "count": 28,
+   "cat": "Topology"
+  },
+  {
+   "word": "curves",
+   "count": 28,
+   "cat": "Number theory"
+  },
+  {
+   "word": "sphere",
+   "count": 28,
+   "cat": "Topology"
+  },
+  {
+   "word": "canonical",
+   "count": 28,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "entropy",
+   "count": 26,
+   "cat": "Dynamical systems and ergodic theory"
+  },
+  {
+   "word": "penrose",
+   "count": 26,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "law",
+   "count": 26,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "fourfolds",
+   "count": 26,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "ising",
+   "count": 26,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "generalized",
+   "count": 26,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "curvature",
+   "count": 25,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "integral",
+   "count": 25,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "gap",
+   "count": 24,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "state",
+   "count": 24,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "local",
+   "count": 24,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "theorem",
+   "count": 24,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "integer",
+   "count": 24,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "degree",
+   "count": 24,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "lipschitz",
+   "count": 24,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "approximation",
+   "count": 24,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "tree",
+   "count": 24,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "elliptic",
+   "count": 24,
+   "cat": "Number theory"
+  },
+  {
+   "word": "square",
+   "count": 24,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "height",
+   "count": 24,
+   "cat": "Topology"
+  },
+  {
+   "word": "abelian",
+   "count": 24,
+   "cat": "Unclassified"
+  },
+  {
+   "word": "minimal",
+   "count": 24,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "gaussian",
+   "count": 24,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "constant",
+   "count": 24,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "boundary",
+   "count": 23,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "characteristic",
+   "count": 23,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "hler",
+   "count": 23,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "formula",
+   "count": 23,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "lower",
+   "count": 22,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "triangular",
+   "count": 22,
+   "cat": "Convex and metric geometry"
+  },
+  {
+   "word": "maximal",
+   "count": 22,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "symmetric",
+   "count": 22,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "points",
+   "count": 21,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "zero",
+   "count": 21,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "quantum",
+   "count": 20,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "kahler",
+   "count": 20,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "strong",
+   "count": 20,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "universal",
+   "count": 20,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "surfaces",
+   "count": 20,
+   "cat": "Unclassified"
+  },
+  {
+   "word": "arbitrary",
+   "count": 20,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "universality",
+   "count": 20,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "factor",
+   "count": 20,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "flow",
+   "count": 19,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "exponent",
+   "count": 19,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "coordinate",
+   "count": 19,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "reconstruction",
+   "count": 18,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "scalar",
+   "count": 18,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "conditional",
+   "count": 18,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "temperature",
+   "count": 18,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "hardness",
+   "count": 18,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "computation",
+   "count": 18,
+   "cat": "Partial differential equations"
+  },
+  {
+   "word": "linear",
+   "count": 18,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "maps",
+   "count": 18,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "order",
+   "count": 18,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "global",
+   "count": 18,
+   "cat": "Number theory"
+  },
+  {
+   "word": "hodge",
+   "count": 18,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "exponential",
+   "count": 18,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "honeycomb",
+   "count": 18,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "rigidity",
+   "count": 18,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "stable",
+   "count": 17,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "mean",
+   "count": 17,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "spin",
+   "count": 16,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "spacetime",
+   "count": 16,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "coulomb",
+   "count": 16,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "chromatic",
+   "count": 16,
+   "cat": "Topology"
+  },
+  {
+   "word": "hilbert",
+   "count": 16,
+   "cat": "Real and complex analysis"
+  },
+  {
+   "word": "projective",
+   "count": 16,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "geometric",
+   "count": 16,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "fourier",
+   "count": 16,
+   "cat": "Real and complex analysis"
+  },
+  {
+   "word": "sherrington",
+   "count": 16,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "kirkpatrick",
+   "count": 16,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "classes",
+   "count": 16,
+   "cat": "Unclassified"
+  },
+  {
+   "word": "distance",
+   "count": 16,
+   "cat": "Convex and metric geometry"
+  },
+  {
+   "word": "mass",
+   "count": 16,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "matrix",
+   "count": 16,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "equation",
+   "count": 16,
+   "cat": "Real and complex analysis"
+  },
+  {
+   "word": "mixing",
+   "count": 16,
+   "cat": "Dynamical systems and ergodic theory"
+  },
+  {
+   "word": "tensor",
+   "count": 15,
+   "cat": "Algebra"
+  },
+  {
+   "word": "complex",
+   "count": 15,
+   "cat": "Topology"
+  },
+  {
+   "word": "regular",
+   "count": 15,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "set",
+   "count": 14,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "complete",
+   "count": 14,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "covering",
+   "count": 14,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "volume",
+   "count": 14,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "spectral",
+   "count": 14,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "stability",
+   "count": 14,
+   "cat": "Operator algebras"
+  },
+  {
+   "word": "case",
+   "count": 14,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "trace",
+   "count": 14,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "graph",
+   "count": 14,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "conformal",
+   "count": 14,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "percolation",
+   "count": 14,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "torsion",
+   "count": 14,
+   "cat": "Algebra"
+  },
+  {
+   "word": "saving",
+   "count": 14,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "projection",
+   "count": 14,
+   "cat": "Operator algebras"
+  },
+  {
+   "word": "quadratic",
+   "count": 14,
+   "cat": "Number theory"
+  },
+  {
+   "word": "torus",
+   "count": 14,
+   "cat": "Number theory"
+  },
+  {
+   "word": "convexity",
+   "count": 14,
+   "cat": "Functional analysis"
+  },
+  {
+   "word": "algebra",
+   "count": 14,
+   "cat": "Algebra"
+  },
+  {
+   "word": "explicit",
+   "count": 14,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "real",
+   "count": 14,
+   "cat": "Real and complex analysis"
+  },
+  {
+   "word": "irrational",
+   "count": 14,
+   "cat": "Dynamical systems and ergodic theory"
+  },
+  {
+   "word": "point",
+   "count": 14,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "walks",
+   "count": 14,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "systems",
+   "count": 14,
+   "cat": "Dynamical systems and ergodic theory"
+  },
+  {
+   "word": "below",
+   "count": 14,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "games",
+   "count": 14,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "higher",
+   "count": 14,
+   "cat": "Real and complex analysis"
+  },
+  {
+   "word": "energy",
+   "count": 14,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "contraction",
+   "count": 14,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "varieties",
+   "count": 14,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "iitaka",
+   "count": 14,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "representation",
+   "count": 13,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "threefold",
+   "count": 13,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "first",
+   "count": 13,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "sle",
+   "count": 13,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "sweeps",
+   "count": 13,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "obstruction",
+   "count": 12,
+   "cat": "Topology"
+  },
+  {
+   "word": "euclidean",
+   "count": 12,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "correspondences",
+   "count": 12,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "continuum",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "singularity",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "cubic",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "strict",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "hyperbolic",
+   "count": 12,
+   "cat": "Group theory"
+  },
+  {
+   "word": "data",
+   "count": 12,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "low",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "pointwise",
+   "count": 12,
+   "cat": "Dynamical systems and ergodic theory"
+  },
+  {
+   "word": "converse",
+   "count": 12,
+   "cat": "Number theory"
+  },
+  {
+   "word": "functions",
+   "count": 12,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "transform",
+   "count": 12,
+   "cat": "Real and complex analysis"
+  },
+  {
+   "word": "type",
+   "count": 12,
+   "cat": "Topology"
+  },
+  {
+   "word": "abundance",
+   "count": 12,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "numerical",
+   "count": 12,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "invariant",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "convergence",
+   "count": 12,
+   "cat": "Real and complex analysis"
+  },
+  {
+   "word": "rank",
+   "count": 12,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "deterministic",
+   "count": 12,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "binary",
+   "count": 12,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "midpoint",
+   "count": 12,
+   "cat": "Functional analysis"
+  },
+  {
+   "word": "fibrations",
+   "count": 12,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "hard",
+   "count": 12,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "analytic",
+   "count": 12,
+   "cat": "Number theory"
+  },
+  {
+   "word": "interfaces",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "length",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "cylinder",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "quasipolynomial",
+   "count": 12,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "selmer",
+   "count": 12,
+   "cat": "Number theory"
+  },
+  {
+   "word": "ordinary",
+   "count": 12,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "near",
+   "count": 12,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "spherical",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "potentials",
+   "count": 12,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "quasi",
+   "count": 12,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "charge",
+   "count": 12,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "closed",
+   "count": 11,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "surface",
+   "count": 11,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "discrete",
+   "count": 11,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "pairs",
+   "count": 10,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "radial",
+   "count": 10,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "density",
+   "count": 10,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "comparison",
+   "count": 10,
+   "cat": "Differential geometry"
+  },
+  {
+   "word": "infinite",
+   "count": 10,
+   "cat": "Group theory"
+  },
+  {
+   "word": "proof",
+   "count": 10,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "general",
+   "count": 10,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "action",
+   "count": 10,
+   "cat": "Dynamical systems and ergodic theory"
+  },
+  {
+   "word": "marked",
+   "count": 10,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "large",
+   "count": 10,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "phase",
+   "count": 10,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "affine",
+   "count": 10,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "area",
+   "count": 10,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "covers",
+   "count": 10,
+   "cat": "Convex and metric geometry"
+  },
+  {
+   "word": "matching",
+   "count": 10,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "asymptotic",
+   "count": 10,
+   "cat": "Functional analysis"
+  },
+  {
+   "word": "bases",
+   "count": 10,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "anticanonical",
+   "count": 10,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "yau",
+   "count": 10,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "root",
+   "count": 10,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "averages",
+   "count": 10,
+   "cat": "Dynamical systems and ergodic theory"
+  },
+  {
+   "word": "multiplication",
+   "count": 10,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "information",
+   "count": 10,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "kerr",
+   "count": 10,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "equality",
+   "count": 10,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "matrices",
+   "count": 10,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "generic",
+   "count": 10,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "products",
+   "count": 10,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "modularity",
+   "count": 10,
+   "cat": "Number theory"
+  },
+  {
+   "word": "estimates",
+   "count": 10,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "adjoint",
+   "count": 10,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "hitting",
+   "count": 10,
+   "cat": "Theoretical computer science"
+  },
+  {
+   "word": "relative",
+   "count": 10,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "termination",
+   "count": 10,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "half",
+   "count": 9,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "algebraic",
+   "count": 9,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "plane",
+   "count": 9,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "heisenberg",
+   "count": 8,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "disk",
+   "count": 8,
+   "cat": "Topology"
+  },
+  {
+   "word": "prescribed",
+   "count": 8,
+   "cat": "Probability and statistical mechanics"
+  },
+  {
+   "word": "reduction",
+   "count": 8,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "least",
+   "count": 8,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "ramsey",
+   "count": 8,
+   "cat": "Combinatorics"
+  },
+  {
+   "word": "fourfold",
+   "count": 8,
+   "cat": "Algebraic and complex geometry"
+  },
+  {
+   "word": "ground",
+   "count": 8,
+   "cat": "Mathematical physics"
+  },
+  {
+   "word": "harmonic",
+   "count": 8,
+   "cat": "Differential geometry"
+  }
+ ],
+ "by_discipline": {
+  "Algebra": [
+   {
+    "word": "conjecture",
+    "count": 29
+   },
+   {
+    "word": "counterexample",
+    "count": 16
+   },
+   {
+    "word": "group",
+    "count": 13
+   },
+   {
+    "word": "finite",
+    "count": 8
+   },
+   {
+    "word": "characteristic",
+    "count": 7
+   },
+   {
+    "word": "finiteness",
+    "count": 6
+   },
+   {
+    "word": "algebra",
+    "count": 6
+   },
+   {
+    "word": "integral",
+    "count": 6
+   },
+   {
+    "word": "symmetric",
+    "count": 6
+   },
+   {
+    "word": "tensor",
+    "count": 6
+   },
+   {
+    "word": "ring",
+    "count": 5
+   },
+   {
+    "word": "direct",
+    "count": 4
+   },
+   {
+    "word": "division",
+    "count": 4
+   },
+   {
+    "word": "problem",
+    "count": 4
+   },
+   {
+    "word": "lattice",
+    "count": 4
+   },
+   {
+    "word": "torsion",
+    "count": 4
+   },
+   {
+    "word": "free",
+    "count": 4
+   },
+   {
+    "word": "artinian",
+    "count": 4
+   },
+   {
+    "word": "foulkes",
+    "count": 4
+   },
+   {
+    "word": "power",
+    "count": 4
+   },
+   {
+    "word": "multiplicity",
+    "count": 4
+   },
+   {
+    "word": "bass",
+    "count": 4
+   },
+   {
+    "word": "zero",
+    "count": 3
+   },
+   {
+    "word": "gersten",
+    "count": 3
+   },
+   {
+    "word": "donovan",
+    "count": 3
+   },
+   {
+    "word": "complete",
+    "count": 2
+   },
+   {
+    "word": "local",
+    "count": 2
+   },
+   {
+    "word": "domain",
+    "count": 2
+   },
+   {
+    "word": "without",
+    "count": 2
+   },
+   {
+    "word": "small",
+    "count": 2
+   },
+   {
+    "word": "cohen",
+    "count": 2
+   },
+   {
+    "word": "macaulay",
+    "count": 2
+   },
+   {
+    "word": "module",
+    "count": 2
+   },
+   {
+    "word": "kaplanskys",
+    "count": 2
+   },
+   {
+    "word": "two",
+    "count": 2
+   },
+   {
+    "word": "kaplansky's",
+    "count": 2
+   },
+   {
+    "word": "odd",
+    "count": 2
+   },
+   {
+    "word": "kurosh",
+    "count": 2
+   },
+   {
+    "word": "second",
+    "count": 2
+   },
+   {
+    "word": "determinant",
+    "count": 2
+   },
+   {
+    "word": "cyclic",
+    "count": 2
+   },
+   {
+    "word": "polytabloid",
+    "count": 2
+   },
+   {
+    "word": "proof",
+    "count": 2
+   },
+   {
+    "word": "negative",
+    "count": 2
+   },
+   {
+    "word": "solution",
+    "count": 2
+   },
+   {
+    "word": "representation",
+    "count": 2
+   },
+   {
+    "word": "directly",
+    "count": 2
+   },
+   {
+    "word": "divisors",
+    "count": 2
+   },
+   {
+    "word": "infinite",
+    "count": 2
+   },
+   {
+    "word": "little",
+    "count": 2
+   },
+   {
+    "word": "finitistic",
+    "count": 2
+   },
+   {
+    "word": "dimension",
+    "count": 2
+   },
+   {
+    "word": "explicit",
+    "count": 2
+   },
+   {
+    "word": "auslander",
+    "count": 2
+   },
+   {
+    "word": "reiten",
+    "count": 2
+   },
+   {
+    "word": "degree",
+    "count": 2
+   },
+   {
+    "word": "three",
+    "count": 2
+   },
+   {
+    "word": "commuting",
+    "count": 2
+   },
+   {
+    "word": "coefficient",
+    "count": 2
+   },
+   {
+    "word": "forms",
+    "count": 2
+   }
+  ],
+  "Algebraic and complex geometry": [
+   {
+    "word": "compact",
+    "count": 26
+   },
+   {
+    "word": "log",
+    "count": 26
+   },
+   {
+    "word": "conjecture",
+    "count": 24
+   },
+   {
+    "word": "fourfolds",
+    "count": 18
+   },
+   {
+    "word": "surface",
+    "count": 16
+   },
+   {
+    "word": "dimension",
+    "count": 16
+   },
+   {
+    "word": "canonical",
+    "count": 16
+   },
+   {
+    "word": "minimal",
+    "count": 16
+   },
+   {
+    "word": "projective",
+    "count": 14
+   },
+   {
+    "word": "hler",
+    "count": 13
+   },
+   {
+    "word": "kahler",
+    "count": 12
+   },
+   {
+    "word": "space",
+    "count": 12
+   },
+   {
+    "word": "fibrations",
+    "count": 12
+   },
+   {
+    "word": "manifolds",
+    "count": 12
+   },
+   {
+    "word": "iitaka",
+    "count": 12
+   },
+   {
+    "word": "pairs",
+    "count": 10
+   },
+   {
+    "word": "hodge",
+    "count": 10
+   },
+   {
+    "word": "abundance",
+    "count": 10
+   },
+   {
+    "word": "numerical",
+    "count": 10
+   },
+   {
+    "word": "metrics",
+    "count": 10
+   },
+   {
+    "word": "anticanonical",
+    "count": 10
+   },
+   {
+    "word": "uniform",
+    "count": 10
+   },
+   {
+    "word": "cover",
+    "count": 8
+   },
+   {
+    "word": "positive",
+    "count": 8
+   },
+   {
+    "word": "characteristic",
+    "count": 8
+   },
+   {
+    "word": "bounded",
+    "count": 8
+   },
+   {
+    "word": "models",
+    "count": 8
+   },
+   {
+    "word": "ordinary",
+    "count": 8
+   },
+   {
+    "word": "adjoint",
+    "count": 8
+   },
+   {
+    "word": "logarithmic",
+    "count": 8
+   },
+   {
+    "word": "generalized",
+    "count": 8
+   },
+   {
+    "word": "conditional",
+    "count": 6
+   },
+   {
+    "word": "special",
+    "count": 6
+   },
+   {
+    "word": "fourfold",
+    "count": 6
+   },
+   {
+    "word": "correspondences",
+    "count": 6
+   },
+   {
+    "word": "every",
+    "count": 6
+   },
+   {
+    "word": "smooth",
+    "count": 6
+   },
+   {
+    "word": "universal",
+    "count": 6
+   },
+   {
+    "word": "affine",
+    "count": 6
+   },
+   {
+    "word": "four",
+    "count": 6
+   },
+   {
+    "word": "abelian",
+    "count": 6
+   },
+   {
+    "word": "nonvanishing",
+    "count": 6
+   },
+   {
+    "word": "one",
+    "count": 6
+   },
+   {
+    "word": "threefolds",
+    "count": 6
+   },
+   {
+    "word": "two",
+    "count": 6
+   },
+   {
+    "word": "rank",
+    "count": 6
+   },
+   {
+    "word": "calabi",
+    "count": 6
+   },
+   {
+    "word": "yau",
+    "count": 6
+   },
+   {
+    "word": "semiampleness",
+    "count": 6
+   },
+   {
+    "word": "fano",
+    "count": 6
+   },
+   {
+    "word": "contractions",
+    "count": 6
+   },
+   {
+    "word": "sections",
+    "count": 6
+   },
+   {
+    "word": "subadditivity",
+    "count": 6
+   },
+   {
+    "word": "maximal",
+    "count": 6
+   },
+   {
+    "word": "seshadri",
+    "count": 6
+   },
+   {
+    "word": "constants",
+    "count": 6
+   },
+   {
+    "word": "nef",
+    "count": 6
+   },
+   {
+    "word": "classes",
+    "count": 6
+   },
+   {
+    "word": "varieties",
+    "count": 6
+   },
+   {
+    "word": "termination",
+    "count": 6
+   }
+  ],
+  "Combinatorics": [
+   {
+    "word": "conjecture",
+    "count": 24
+   },
+   {
+    "word": "bound",
+    "count": 16
+   },
+   {
+    "word": "counterexample",
+    "count": 14
+   },
+   {
+    "word": "number",
+    "count": 14
+   },
+   {
+    "word": "graphs",
+    "count": 12
+   },
+   {
+    "word": "power",
+    "count": 12
+   },
+   {
+    "word": "polynomial",
+    "count": 10
+   },
+   {
+    "word": "saving",
+    "count": 10
+   },
+   {
+    "word": "ramsey",
+    "count": 8
+   },
+   {
+    "word": "degree",
+    "count": 8
+   },
+   {
+    "word": "planar",
+    "count": 8
+   },
+   {
+    "word": "sharp",
+    "count": 8
+   },
+   {
+    "word": "covering",
+    "count": 6
+   },
+   {
+    "word": "linear",
+    "count": 6
+   },
+   {
+    "word": "cycle",
+    "count": 6
+   },
+   {
+    "word": "every",
+    "count": 6
+   },
+   {
+    "word": "graph",
+    "count": 6
+   },
+   {
+    "word": "logarithmic",
+    "count": 6
+   },
+   {
+    "word": "clique",
+    "count": 6
+   },
+   {
+    "word": "exponent",
+    "count": 6
+   },
+   {
+    "word": "threshold",
+    "count": 6
+   },
+   {
+    "word": "finite",
+    "count": 4
+   },
+   {
+    "word": "euclidean",
+    "count": 4
+   },
+   {
+    "word": "chromatic",
+    "count": 4
+   },
+   {
+    "word": "decomposition",
+    "count": 4
+   },
+   {
+    "word": "coloring",
+    "count": 4
+   },
+   {
+    "word": "free",
+    "count": 4
+   },
+   {
+    "word": "dimensional",
+    "count": 4
+   },
+   {
+    "word": "strong",
+    "count": 4
+   },
+   {
+    "word": "thin",
+    "count": 4
+   },
+   {
+    "word": "triangle",
+    "count": 4
+   },
+   {
+    "word": "differences",
+    "count": 4
+   },
+   {
+    "word": "distances",
+    "count": 4
+   },
+   {
+    "word": "prime",
+    "count": 4
+   },
+   {
+    "word": "square",
+    "count": 4
+   },
+   {
+    "word": "second",
+    "count": 4
+   },
+   {
+    "word": "properties",
+    "count": 4
+   },
+   {
+    "word": "dimension",
+    "count": 4
+   },
+   {
+    "word": "fixed",
+    "count": 4
+   },
+   {
+    "word": "integral",
+    "count": 4
+   },
+   {
+    "word": "expectation",
+    "count": 4
+   },
+   {
+    "word": "bipartite",
+    "count": 4
+   },
+   {
+    "word": "removal",
+    "count": 4
+   },
+   {
+    "word": "crossing",
+    "count": 4
+   },
+   {
+    "word": "complete",
+    "count": 4
+   },
+   {
+    "word": "order",
+    "count": 4
+   },
+   {
+    "word": "tree",
+    "count": 4
+   },
+   {
+    "word": "hadwiger",
+    "count": 3
+   },
+   {
+    "word": "classification",
+    "count": 2
+   },
+   {
+    "word": "configurations",
+    "count": 2
+   },
+   {
+    "word": "rysers",
+    "count": 2
+   },
+   {
+    "word": "ryser's",
+    "count": 2
+   },
+   {
+    "word": "colin",
+    "count": 2
+   },
+   {
+    "word": "infinite",
+    "count": 2
+   },
+   {
+    "word": "matroid",
+    "count": 2
+   },
+   {
+    "word": "packing",
+    "count": 2
+   },
+   {
+    "word": "edge",
+    "count": 2
+   },
+   {
+    "word": "list",
+    "count": 2
+   },
+   {
+    "word": "terms",
+    "count": 2
+   },
+   {
+    "word": "independence",
+    "count": 2
+   }
+  ],
+  "Convex and metric geometry": [
+   {
+    "word": "finite",
+    "count": 10
+   },
+   {
+    "word": "bound",
+    "count": 10
+   },
+   {
+    "word": "dimension",
+    "count": 8
+   },
+   {
+    "word": "triangular",
+    "count": 8
+   },
+   {
+    "word": "conjecture",
+    "count": 8
+   },
+   {
+    "word": "log",
+    "count": 6
+   },
+   {
+    "word": "hyperbolicity",
+    "count": 6
+   },
+   {
+    "word": "cone",
+    "count": 6
+   },
+   {
+    "word": "planar",
+    "count": 6
+   },
+   {
+    "word": "lattice",
+    "count": 6
+   },
+   {
+    "word": "covering",
+    "count": 6
+   },
+   {
+    "word": "edit",
+    "count": 6
+   },
+   {
+    "word": "distance",
+    "count": 6
+   },
+   {
+    "word": "cylinder",
+    "count": 6
+   },
+   {
+    "word": "logarithmic",
+    "count": 4
+   },
+   {
+    "word": "inequality",
+    "count": 4
+   },
+   {
+    "word": "nonspectrahedral",
+    "count": 4
+   },
+   {
+    "word": "product",
+    "count": 4
+   },
+   {
+    "word": "simplex",
+    "count": 4
+   },
+   {
+    "word": "projection",
+    "count": 4
+   },
+   {
+    "word": "volume",
+    "count": 4
+   },
+   {
+    "word": "sharp",
+    "count": 4
+   },
+   {
+    "word": "constants",
+    "count": 4
+   },
+   {
+    "word": "certificate",
+    "count": 4
+   },
+   {
+    "word": "circle",
+    "count": 4
+   },
+   {
+    "word": "order",
+    "count": 4
+   },
+   {
+    "word": "universal",
+    "count": 4
+   },
+   {
+    "word": "optimality",
+    "count": 4
+   },
+   {
+    "word": "semidefinite",
+    "count": 4
+   },
+   {
+    "word": "lift",
+    "count": 4
+   },
+   {
+    "word": "binary",
+    "count": 4
+   },
+   {
+    "word": "embeddings",
+    "count": 4
+   },
+   {
+    "word": "approximation",
+    "count": 4
+   },
+   {
+    "word": "graph",
+    "count": 4
+   },
+   {
+    "word": "distortion",
+    "count": 4
+   },
+   {
+    "word": "symmetric",
+    "count": 4
+   },
+   {
+    "word": "mahler",
+    "count": 4
+   },
+   {
+    "word": "free",
+    "count": 2
+   },
+   {
+    "word": "sobolev",
+    "count": 2
+   },
+   {
+    "word": "subgaussian",
+    "count": 2
+   },
+   {
+    "word": "concave",
+    "count": 2
+   },
+   {
+    "word": "measures",
+    "count": 2
+   },
+   {
+    "word": "doubling",
+    "count": 2
+   },
+   {
+    "word": "hilbert",
+    "count": 2
+   },
+   {
+    "word": "subset",
+    "count": 2
+   },
+   {
+    "word": "dimensional",
+    "count": 2
+   },
+   {
+    "word": "lipschitz",
+    "count": 2
+   },
+   {
+    "word": "embedding",
+    "count": 2
+   },
+   {
+    "word": "counterexample",
+    "count": 2
+   },
+   {
+    "word": "maximum",
+    "count": 2
+   },
+   {
+    "word": "body",
+    "count": 2
+   },
+   {
+    "word": "entropy",
+    "count": 2
+   },
+   {
+    "word": "isotropic",
+    "count": 2
+   },
+   {
+    "word": "fourier",
+    "count": 2
+   },
+   {
+    "word": "packing",
+    "count": 2
+   },
+   {
+    "word": "single",
+    "count": 2
+   },
+   {
+    "word": "atomic",
+    "count": 2
+   },
+   {
+    "word": "exact",
+    "count": 2
+   },
+   {
+    "word": "matching",
+    "count": 2
+   },
+   {
+    "word": "exponent",
+    "count": 2
+   }
+  ],
+  "Differential geometry": [
+   {
+    "word": "curvature",
+    "count": 25
+   },
+   {
+    "word": "dimension",
+    "count": 16
+   },
+   {
+    "word": "four",
+    "count": 16
+   },
+   {
+    "word": "bound",
+    "count": 15
+   },
+   {
+    "word": "three",
+    "count": 15
+   },
+   {
+    "word": "scalar",
+    "count": 14
+   },
+   {
+    "word": "space",
+    "count": 12
+   },
+   {
+    "word": "smooth",
+    "count": 12
+   },
+   {
+    "word": "manifolds",
+    "count": 12
+   },
+   {
+    "word": "counterexample",
+    "count": 11
+   },
+   {
+    "word": "flow",
+    "count": 9
+   },
+   {
+    "word": "number",
+    "count": 9
+   },
+   {
+    "word": "points",
+    "count": 9
+   },
+   {
+    "word": "integral",
+    "count": 8
+   },
+   {
+    "word": "morse",
+    "count": 8
+   },
+   {
+    "word": "closed",
+    "count": 6
+   },
+   {
+    "word": "ricci",
+    "count": 6
+   },
+   {
+    "word": "bounded",
+    "count": 6
+   },
+   {
+    "word": "without",
+    "count": 6
+   },
+   {
+    "word": "metric",
+    "count": 6
+   },
+   {
+    "word": "curved",
+    "count": 6
+   },
+   {
+    "word": "einstein",
+    "count": 6
+   },
+   {
+    "word": "weak",
+    "count": 6
+   },
+   {
+    "word": "below",
+    "count": 6
+   },
+   {
+    "word": "stable",
+    "count": 6
+   },
+   {
+    "word": "positive",
+    "count": 6
+   },
+   {
+    "word": "uniform",
+    "count": 6
+   },
+   {
+    "word": "width",
+    "count": 6
+   },
+   {
+    "word": "nodal",
+    "count": 6
+   },
+   {
+    "word": "theorem",
+    "count": 6
+   },
+   {
+    "word": "time",
+    "count": 5
+   },
+   {
+    "word": "fixed",
+    "count": 5
+   },
+   {
+    "word": "finite",
+    "count": 4
+   },
+   {
+    "word": "codimension",
+    "count": 4
+   },
+   {
+    "word": "one",
+    "count": 4
+   },
+   {
+    "word": "stationary",
+    "count": 4
+   },
+   {
+    "word": "varifold",
+    "count": 4
+   },
+   {
+    "word": "integer",
+    "count": 4
+   },
+   {
+    "word": "degree",
+    "count": 4
+   },
+   {
+    "word": "harmonic",
+    "count": 4
+   },
+   {
+    "word": "comparison",
+    "count": 4
+   },
+   {
+    "word": "conjecture",
+    "count": 4
+   },
+   {
+    "word": "holomorphic",
+    "count": 4
+   },
+   {
+    "word": "coordinates",
+    "count": 4
+   },
+   {
+    "word": "local",
+    "count": 4
+   },
+   {
+    "word": "isometric",
+    "count": 4
+   },
+   {
+    "word": "immersion",
+    "count": 4
+   },
+   {
+    "word": "dimensional",
+    "count": 4
+   },
+   {
+    "word": "volume",
+    "count": 4
+   },
+   {
+    "word": "rcd",
+    "count": 4
+   },
+   {
+    "word": "equality",
+    "count": 4
+   },
+   {
+    "word": "negative",
+    "count": 4
+   },
+   {
+    "word": "euclidean",
+    "count": 4
+   },
+   {
+    "word": "rigidity",
+    "count": 4
+   },
+   {
+    "word": "mtw",
+    "count": 4
+   },
+   {
+    "word": "hamiltonian",
+    "count": 4
+   },
+   {
+    "word": "two",
+    "count": 4
+   },
+   {
+    "word": "geodesic",
+    "count": 4
+   },
+   {
+    "word": "every",
+    "count": 4
+   },
+   {
+    "word": "flat",
+    "count": 4
+   }
+  ],
+  "Dynamical systems and ergodic theory": [
+   {
+    "word": "mixing",
+    "count": 10
+   },
+   {
+    "word": "entropy",
+    "count": 8
+   },
+   {
+    "word": "ergodic",
+    "count": 8
+   },
+   {
+    "word": "averages",
+    "count": 8
+   },
+   {
+    "word": "smooth",
+    "count": 6
+   },
+   {
+    "word": "systems",
+    "count": 6
+   },
+   {
+    "word": "billiards",
+    "count": 6
+   },
+   {
+    "word": "pointwise",
+    "count": 6
+   },
+   {
+    "word": "transformations",
+    "count": 6
+   },
+   {
+    "word": "positive",
+    "count": 4
+   },
+   {
+    "word": "weakly",
+    "count": 4
+   },
+   {
+    "word": "reversible",
+    "count": 4
+   },
+   {
+    "word": "mass",
+    "count": 4
+   },
+   {
+    "word": "action",
+    "count": 4
+   },
+   {
+    "word": "continuous",
+    "count": 4
+   },
+   {
+    "word": "caustic",
+    "count": 4
+   },
+   {
+    "word": "triangular",
+    "count": 4
+   },
+   {
+    "word": "irrational",
+    "count": 4
+   },
+   {
+    "word": "angle",
+    "count": 4
+   },
+   {
+    "word": "convergence",
+    "count": 4
+   },
+   {
+    "word": "triple",
+    "count": 4
+   },
+   {
+    "word": "multiple",
+    "count": 4
+   },
+   {
+    "word": "collar",
+    "count": 4
+   },
+   {
+    "word": "limit",
+    "count": 4
+   },
+   {
+    "word": "cycles",
+    "count": 4
+   },
+   {
+    "word": "uniform",
+    "count": 4
+   },
+   {
+    "word": "counterexample",
+    "count": 2
+   },
+   {
+    "word": "conjecture",
+    "count": 2
+   },
+   {
+    "word": "system",
+    "count": 2
+   },
+   {
+    "word": "without",
+    "count": 2
+   },
+   {
+    "word": "volume",
+    "count": 2
+   },
+   {
+    "word": "model",
+    "count": 2
+   },
+   {
+    "word": "three",
+    "count": 2
+   },
+   {
+    "word": "torus",
+    "count": 2
+   },
+   {
+    "word": "diffeomorphism",
+    "count": 2
+   },
+   {
+    "word": "simple",
+    "count": 2
+   },
+   {
+    "word": "lebesgue",
+    "count": 2
+   },
+   {
+    "word": "spectrum",
+    "count": 2
+   },
+   {
+    "word": "arithmetic",
+    "count": 2
+   },
+   {
+    "word": "classification",
+    "count": 2
+   },
+   {
+    "word": "pisot",
+    "count": 2
+   },
+   {
+    "word": "singularity",
+    "count": 2
+   },
+   {
+    "word": "bernoulli",
+    "count": 2
+   },
+   {
+    "word": "convolutions",
+    "count": 2
+   },
+   {
+    "word": "boundedness",
+    "count": 2
+   },
+   {
+    "word": "persistence",
+    "count": 2
+   },
+   {
+    "word": "phase",
+    "count": 2
+   },
+   {
+    "word": "foliations",
+    "count": 2
+   },
+   {
+    "word": "create",
+    "count": 2
+   },
+   {
+    "word": "analytic",
+    "count": 2
+   },
+   {
+    "word": "ergodicity",
+    "count": 2
+   },
+   {
+    "word": "fourfold",
+    "count": 2
+   },
+   {
+    "word": "metric",
+    "count": 2
+   },
+   {
+    "word": "standard",
+    "count": 2
+   },
+   {
+    "word": "map",
+    "count": 2
+   },
+   {
+    "word": "large",
+    "count": 2
+   },
+   {
+    "word": "parameters",
+    "count": 2
+   },
+   {
+    "word": "rigidity",
+    "count": 2
+   },
+   {
+    "word": "problem",
+    "count": 2
+   },
+   {
+    "word": "one",
+    "count": 2
+   }
+  ],
+  "Functional analysis": [
+   {
+    "word": "midpoint",
+    "count": 12
+   },
+   {
+    "word": "convexity",
+    "count": 8
+   },
+   {
+    "word": "spaces",
+    "count": 7
+   },
+   {
+    "word": "asymptotic",
+    "count": 6
+   },
+   {
+    "word": "tree",
+    "count": 6
+   },
+   {
+    "word": "lipschitz",
+    "count": 6
+   },
+   {
+    "word": "cotype",
+    "count": 6
+   },
+   {
+    "word": "metric",
+    "count": 5
+   },
+   {
+    "word": "complete",
+    "count": 4
+   },
+   {
+    "word": "crouzeix",
+    "count": 4
+   },
+   {
+    "word": "problem",
+    "count": 4
+   },
+   {
+    "word": "diamond",
+    "count": 4
+   },
+   {
+    "word": "distortion",
+    "count": 4
+   },
+   {
+    "word": "reflexive",
+    "count": 4
+   },
+   {
+    "word": "space",
+    "count": 4
+   },
+   {
+    "word": "without",
+    "count": 4
+   },
+   {
+    "word": "conjecture",
+    "count": 4
+   },
+   {
+    "word": "bounded",
+    "count": 4
+   },
+   {
+    "word": "approximation",
+    "count": 4
+   },
+   {
+    "word": "banach",
+    "count": 4
+   },
+   {
+    "word": "separable",
+    "count": 4
+   },
+   {
+    "word": "markov",
+    "count": 4
+   },
+   {
+    "word": "two",
+    "count": 4
+   },
+   {
+    "word": "potentials",
+    "count": 4
+   },
+   {
+    "word": "positive",
+    "count": 3
+   },
+   {
+    "word": "direct",
+    "count": 2
+   },
+   {
+    "word": "proof",
+    "count": 2
+   },
+   {
+    "word": "inequality",
+    "count": 2
+   },
+   {
+    "word": "solution",
+    "count": 2
+   },
+   {
+    "word": "uniform",
+    "count": 2
+   },
+   {
+    "word": "unbounded",
+    "count": 2
+   },
+   {
+    "word": "absorption",
+    "count": 2
+   },
+   {
+    "word": "linear",
+    "count": 2
+   },
+   {
+    "word": "copy",
+    "count": 2
+   },
+   {
+    "word": "counterexamples",
+    "count": 2
+   },
+   {
+    "word": "duality",
+    "count": 2
+   },
+   {
+    "word": "entropy",
+    "count": 2
+   },
+   {
+    "word": "energies",
+    "count": 2
+   },
+   {
+    "word": "exact",
+    "count": 2
+   },
+   {
+    "word": "moduli",
+    "count": 2
+   },
+   {
+    "word": "daugavet",
+    "count": 2
+   },
+   {
+    "word": "subspace",
+    "count": 2
+   },
+   {
+    "word": "free",
+    "count": 2
+   },
+   {
+    "word": "uniformly",
+    "count": 2
+   },
+   {
+    "word": "discrete",
+    "count": 2
+   },
+   {
+    "word": "fixed",
+    "count": 2
+   },
+   {
+    "word": "points",
+    "count": 2
+   },
+   {
+    "word": "nonexpansive",
+    "count": 2
+   },
+   {
+    "word": "maps",
+    "count": 2
+   },
+   {
+    "word": "independent",
+    "count": 2
+   },
+   {
+    "word": "products",
+    "count": 2
+   },
+   {
+    "word": "real",
+    "count": 2
+   },
+   {
+    "word": "auc",
+    "count": 2
+   },
+   {
+    "word": "renormings",
+    "count": 2
+   },
+   {
+    "word": "equivalent",
+    "count": 2
+   },
+   {
+    "word": "need",
+    "count": 2
+   },
+   {
+    "word": "linearly",
+    "count": 2
+   },
+   {
+    "word": "isomorphic",
+    "count": 2
+   },
+   {
+    "word": "path",
+    "count": 2
+   },
+   {
+    "word": "costs",
+    "count": 2
+   }
+  ],
+  "Group theory": [
+   {
+    "word": "group",
+    "count": 34
+   },
+   {
+    "word": "finitely",
+    "count": 8
+   },
+   {
+    "word": "conjecture",
+    "count": 8
+   },
+   {
+    "word": "hyperbolic",
+    "count": 8
+   },
+   {
+    "word": "finite",
+    "count": 6
+   },
+   {
+    "word": "artin",
+    "count": 6
+   },
+   {
+    "word": "infinite",
+    "count": 6
+   },
+   {
+    "word": "presented",
+    "count": 6
+   },
+   {
+    "word": "geometric",
+    "count": 4
+   },
+   {
+    "word": "cat",
+    "count": 4
+   },
+   {
+    "word": "action",
+    "count": 4
+   },
+   {
+    "word": "free",
+    "count": 4
+   },
+   {
+    "word": "residually",
+    "count": 4
+   },
+   {
+    "word": "simple",
+    "count": 4
+   },
+   {
+    "word": "one",
+    "count": 4
+   },
+   {
+    "word": "relator",
+    "count": 4
+   },
+   {
+    "word": "amenability",
+    "count": 4
+   },
+   {
+    "word": "generated",
+    "count": 2
+   },
+   {
+    "word": "counterexample",
+    "count": 2
+   },
+   {
+    "word": "eilenberg",
+    "count": 2
+   },
+   {
+    "word": "ganea",
+    "count": 2
+   },
+   {
+    "word": "without",
+    "count": 2
+   },
+   {
+    "word": "fixed",
+    "count": 2
+   },
+   {
+    "word": "price",
+    "count": 2
+   },
+   {
+    "word": "modulus",
+    "count": 2
+   },
+   {
+    "word": "proof",
+    "count": 2
+   },
+   {
+    "word": "cannon",
+    "count": 2
+   },
+   {
+    "word": "torsion",
+    "count": 2
+   },
+   {
+    "word": "universal",
+    "count": 2
+   },
+   {
+    "word": "type",
+    "count": 2
+   },
+   {
+    "word": "infinity",
+    "count": 2
+   },
+   {
+    "word": "periodic",
+    "count": 2
+   },
+   {
+    "word": "amenable",
+    "count": 2
+   },
+   {
+    "word": "baumslag",
+    "count": 2
+   },
+   {
+    "word": "solitar",
+    "count": 2
+   },
+   {
+    "word": "algebraic",
+    "count": 2
+   },
+   {
+    "word": "envelopes",
+    "count": 2
+   },
+   {
+    "word": "boone",
+    "count": 2
+   },
+   {
+    "word": "higman",
+    "count": 2
+   },
+   {
+    "word": "harmonic",
+    "count": 2
+   },
+   {
+    "word": "heights",
+    "count": 2
+   },
+   {
+    "word": "nonsingular",
+    "count": 2
+   },
+   {
+    "word": "systems",
+    "count": 2
+   },
+   {
+    "word": "equations",
+    "count": 2
+   },
+   {
+    "word": "arbitrary",
+    "count": 2
+   },
+   {
+    "word": "parabolic",
+    "count": 2
+   },
+   {
+    "word": "intersections",
+    "count": 2
+   },
+   {
+    "word": "quasi",
+    "count": 2
+   },
+   {
+    "word": "isometric",
+    "count": 2
+   },
+   {
+    "word": "recognition",
+    "count": 2
+   },
+   {
+    "word": "virtually",
+    "count": 2
+   },
+   {
+    "word": "polycyclic",
+    "count": 2
+   },
+   {
+    "word": "overgroups",
+    "count": 2
+   },
+   {
+    "word": "decidable",
+    "count": 2
+   },
+   {
+    "word": "word",
+    "count": 2
+   },
+   {
+    "word": "problem",
+    "count": 2
+   },
+   {
+    "word": "strong",
+    "count": 2
+   },
+   {
+    "word": "ulam",
+    "count": 2
+   },
+   {
+    "word": "stability",
+    "count": 2
+   },
+   {
+    "word": "characterizes",
+    "count": 2
+   }
+  ],
+  "Mathematical logic": [
+   {
+    "word": "polynomial",
+    "count": 6
+   },
+   {
+    "word": "time",
+    "count": 6
+   },
+   {
+    "word": "categoricity",
+    "count": 4
+   },
+   {
+    "word": "choiceless",
+    "count": 4
+   },
+   {
+    "word": "counting",
+    "count": 4
+   },
+   {
+    "word": "choice",
+    "count": 4
+   },
+   {
+    "word": "obstruction",
+    "count": 2
+   },
+   {
+    "word": "prescribed",
+    "count": 2
+   },
+   {
+    "word": "threshold",
+    "count": 2
+   },
+   {
+    "word": "capture",
+    "count": 2
+   },
+   {
+    "word": "eventual",
+    "count": 2
+   },
+   {
+    "word": "abstract",
+    "count": 2
+   },
+   {
+    "word": "elementary",
+    "count": 2
+   },
+   {
+    "word": "classes",
+    "count": 2
+   },
+   {
+    "word": "rigidity",
+    "count": 2
+   },
+   {
+    "word": "turing",
+    "count": 2
+   },
+   {
+    "word": "degrees",
+    "count": 2
+   },
+   {
+    "word": "single",
+    "count": 2
+   },
+   {
+    "word": "fold",
+    "count": 2
+   },
+   {
+    "word": "diophantine",
+    "count": 2
+   },
+   {
+    "word": "representations",
+    "count": 2
+   },
+   {
+    "word": "partition",
+    "count": 2
+   },
+   {
+    "word": "principle",
+    "count": 2
+   },
+   {
+    "word": "imply",
+    "count": 2
+   },
+   {
+    "word": "weak",
+    "count": 2
+   },
+   {
+    "word": "strong",
+    "count": 2
+   },
+   {
+    "word": "normalization",
+    "count": 2
+   },
+   {
+    "word": "pure",
+    "count": 2
+   },
+   {
+    "word": "type",
+    "count": 2
+   },
+   {
+    "word": "systems",
+    "count": 2
+   },
+   {
+    "word": "witnessed",
+    "count": 2
+   },
+   {
+    "word": "symmetric",
+    "count": 2
+   },
+   {
+    "word": "strictly",
+    "count": 2
+   },
+   {
+    "word": "stronger",
+    "count": 2
+   }
+  ],
+  "Mathematical physics": [
+   {
+    "word": "inequality",
+    "count": 30
+   },
+   {
+    "word": "penrose",
+    "count": 26
+   },
+   {
+    "word": "spacetime",
+    "count": 16
+   },
+   {
+    "word": "quantum",
+    "count": 16
+   },
+   {
+    "word": "dimensional",
+    "count": 16
+   },
+   {
+    "word": "coulomb",
+    "count": 12
+   },
+   {
+    "word": "gap",
+    "count": 10
+   },
+   {
+    "word": "one",
+    "count": 10
+   },
+   {
+    "word": "state",
+    "count": 10
+   },
+   {
+    "word": "kerr",
+    "count": 10
+   },
+   {
+    "word": "charge",
+    "count": 10
+   },
+   {
+    "word": "heisenberg",
+    "count": 8
+   },
+   {
+    "word": "ground",
+    "count": 8
+   },
+   {
+    "word": "dilute",
+    "count": 8
+   },
+   {
+    "word": "conformal",
+    "count": 8
+   },
+   {
+    "word": "data",
+    "count": 8
+   },
+   {
+    "word": "area",
+    "count": 8
+   },
+   {
+    "word": "law",
+    "count": 8
+   },
+   {
+    "word": "gas",
+    "count": 8
+   },
+   {
+    "word": "rigidity",
+    "count": 8
+   },
+   {
+    "word": "dimensions",
+    "count": 6
+   },
+   {
+    "word": "uniform",
+    "count": 6
+   },
+   {
+    "word": "bound",
+    "count": 6
+   },
+   {
+    "word": "bose",
+    "count": 6
+   },
+   {
+    "word": "three",
+    "count": 6
+   },
+   {
+    "word": "finite",
+    "count": 6
+   },
+   {
+    "word": "positive",
+    "count": 6
+   },
+   {
+    "word": "hard",
+    "count": 6
+   },
+   {
+    "word": "sphere",
+    "count": 6
+   },
+   {
+    "word": "inequalities",
+    "count": 6
+   },
+   {
+    "word": "generalized",
+    "count": 6
+   },
+   {
+    "word": "sharp",
+    "count": 6
+   },
+   {
+    "word": "lieb",
+    "count": 6
+   },
+   {
+    "word": "thirring",
+    "count": 6
+   },
+   {
+    "word": "fixed",
+    "count": 6
+   },
+   {
+    "word": "atoms",
+    "count": 6
+   },
+   {
+    "word": "generic",
+    "count": 6
+   },
+   {
+    "word": "future",
+    "count": 6
+   },
+   {
+    "word": "inextendibility",
+    "count": 6
+   },
+   {
+    "word": "near",
+    "count": 6
+   },
+   {
+    "word": "model",
+    "count": 6
+   },
+   {
+    "word": "ferromagnet",
+    "count": 6
+   },
+   {
+    "word": "boundary",
+    "count": 4
+   },
+   {
+    "word": "field",
+    "count": 4
+   },
+   {
+    "word": "spin",
+    "count": 4
+   },
+   {
+    "word": "least",
+    "count": 4
+   },
+   {
+    "word": "four",
+    "count": 4
+   },
+   {
+    "word": "density",
+    "count": 4
+   },
+   {
+    "word": "laughlin",
+    "count": 4
+   },
+   {
+    "word": "spectral",
+    "count": 4
+   },
+   {
+    "word": "local",
+    "count": 4
+   },
+   {
+    "word": "anti",
+    "count": 4
+   },
+   {
+    "word": "sitter",
+    "count": 4
+   },
+   {
+    "word": "two",
+    "count": 4
+   },
+   {
+    "word": "spectrum",
+    "count": 4
+   },
+   {
+    "word": "disorder",
+    "count": 4
+   },
+   {
+    "word": "anderson",
+    "count": 4
+   },
+   {
+    "word": "condensation",
+    "count": 4
+   },
+   {
+    "word": "temperature",
+    "count": 4
+   },
+   {
+    "word": "entropy",
+    "count": 4
+   }
+  ],
+  "Number theory": [
+   {
+    "word": "prime",
+    "count": 24
+   },
+   {
+    "word": "curves",
+    "count": 18
+   },
+   {
+    "word": "conjecture",
+    "count": 16
+   },
+   {
+    "word": "elliptic",
+    "count": 12
+   },
+   {
+    "word": "two",
+    "count": 10
+   },
+   {
+    "word": "function",
+    "count": 10
+   },
+   {
+    "word": "number",
+    "count": 8
+   },
+   {
+    "word": "hecke",
+    "count": 8
+   },
+   {
+    "word": "primitive",
+    "count": 8
+   },
+   {
+    "word": "fields",
+    "count": 8
+   },
+   {
+    "word": "converse",
+    "count": 6
+   },
+   {
+    "word": "quadratic",
+    "count": 6
+   },
+   {
+    "word": "formula",
+    "count": 6
+   },
+   {
+    "word": "tame",
+    "count": 6
+   },
+   {
+    "word": "eigensheaves",
+    "count": 6
+   },
+   {
+    "word": "positive",
+    "count": 6
+   },
+   {
+    "word": "characteristic",
+    "count": 6
+   },
+   {
+    "word": "zilber",
+    "count": 6
+   },
+   {
+    "word": "pink",
+    "count": 6
+   },
+   {
+    "word": "equidistribution",
+    "count": 6
+   },
+   {
+    "word": "torus",
+    "count": 6
+   },
+   {
+    "word": "packets",
+    "count": 6
+   },
+   {
+    "word": "selmer",
+    "count": 6
+   },
+   {
+    "word": "modularity",
+    "count": 6
+   },
+   {
+    "word": "global",
+    "count": 6
+   },
+   {
+    "word": "arthur",
+    "count": 6
+   },
+   {
+    "word": "points",
+    "count": 6
+   },
+   {
+    "word": "reconstruction",
+    "count": 6
+   },
+   {
+    "word": "rational",
+    "count": 4
+   },
+   {
+    "word": "bound",
+    "count": 4
+   },
+   {
+    "word": "arbitrary",
+    "count": 4
+   },
+   {
+    "word": "quartic",
+    "count": 4
+   },
+   {
+    "word": "birch",
+    "count": 4
+   },
+   {
+    "word": "swinnerton",
+    "count": 4
+   },
+   {
+    "word": "dyer",
+    "count": 4
+   },
+   {
+    "word": "corank",
+    "count": 4
+   },
+   {
+    "word": "cuspidal",
+    "count": 4
+   },
+   {
+    "word": "analytic",
+    "count": 4
+   },
+   {
+    "word": "density",
+    "count": 4
+   },
+   {
+    "word": "varieties",
+    "count": 4
+   },
+   {
+    "word": "rationality",
+    "count": 4
+   },
+   {
+    "word": "abelian",
+    "count": 4
+   },
+   {
+    "word": "groups",
+    "count": 4
+   },
+   {
+    "word": "lower",
+    "count": 4
+   },
+   {
+    "word": "predecessors",
+    "count": 4
+   },
+   {
+    "word": "roots",
+    "count": 4
+   },
+   {
+    "word": "every",
+    "count": 4
+   },
+   {
+    "word": "integer",
+    "count": 4
+   },
+   {
+    "word": "base",
+    "count": 4
+   },
+   {
+    "word": "siegel",
+    "count": 4
+   },
+   {
+    "word": "level",
+    "count": 4
+   },
+   {
+    "word": "milnor",
+    "count": 4
+   },
+   {
+    "word": "theory",
+    "count": 4
+   },
+   {
+    "word": "values",
+    "count": 4
+   },
+   {
+    "word": "adic",
+    "count": 4
+   },
+   {
+    "word": "law",
+    "count": 4
+   },
+   {
+    "word": "margulis",
+    "count": 4
+   },
+   {
+    "word": "platonov",
+    "count": 4
+   },
+   {
+    "word": "quasi",
+    "count": 4
+   },
+   {
+    "word": "riemann",
+    "count": 4
+   }
+  ],
+  "Operator algebras": [
+   {
+    "word": "counterexample",
+    "count": 12
+   },
+   {
+    "word": "finite",
+    "count": 8
+   },
+   {
+    "word": "free",
+    "count": 8
+   },
+   {
+    "word": "projection",
+    "count": 6
+   },
+   {
+    "word": "factors",
+    "count": 6
+   },
+   {
+    "word": "subalgebras",
+    "count": 6
+   },
+   {
+    "word": "without",
+    "count": 6
+   },
+   {
+    "word": "jiang",
+    "count": 6
+   },
+   {
+    "word": "stability",
+    "count": 6
+   },
+   {
+    "word": "kadison",
+    "count": 5
+   },
+   {
+    "word": "conjecture",
+    "count": 4
+   },
+   {
+    "word": "problem",
+    "count": 4
+   },
+   {
+    "word": "entropy",
+    "count": 4
+   },
+   {
+    "word": "torsion",
+    "count": 4
+   },
+   {
+    "word": "reduced",
+    "count": 4
+   },
+   {
+    "word": "baum",
+    "count": 4
+   },
+   {
+    "word": "connes",
+    "count": 4
+   },
+   {
+    "word": "nuclear",
+    "count": 4
+   },
+   {
+    "word": "embeddings",
+    "count": 4
+   },
+   {
+    "word": "irrational",
+    "count": 4
+   },
+   {
+    "word": "trace",
+    "count": 4
+   },
+   {
+    "word": "paving",
+    "count": 4
+   },
+   {
+    "word": "arbitrary",
+    "count": 4
+   },
+   {
+    "word": "maximal",
+    "count": 4
+   },
+   {
+    "word": "abelian",
+    "count": 4
+   },
+   {
+    "word": "commutant",
+    "count": 4
+   },
+   {
+    "word": "bounded",
+    "count": 4
+   },
+   {
+    "word": "recovery",
+    "count": 4
+   },
+   {
+    "word": "algebras",
+    "count": 4
+   },
+   {
+    "word": "spatial",
+    "count": 4
+   },
+   {
+    "word": "comparison",
+    "count": 4
+   },
+   {
+    "word": "absorption",
+    "count": 4
+   },
+   {
+    "word": "amenable",
+    "count": 4
+   },
+   {
+    "word": "preserving",
+    "count": 4
+   },
+   {
+    "word": "uniform",
+    "count": 4
+   },
+   {
+    "word": "dimension",
+    "count": 4
+   },
+   {
+    "word": "strong",
+    "count": 4
+   },
+   {
+    "word": "lattice",
+    "count": 4
+   },
+   {
+    "word": "stable",
+    "count": 3
+   },
+   {
+    "word": "kaplansky",
+    "count": 3
+   },
+   {
+    "word": "quasitrace",
+    "count": 2
+   },
+   {
+    "word": "zfc",
+    "count": 2
+   },
+   {
+    "word": "separation",
+    "count": 2
+   },
+   {
+    "word": "microstates",
+    "count": 2
+   },
+   {
+    "word": "nonmicrostates",
+    "count": 2
+   },
+   {
+    "word": "injectivity",
+    "count": 2
+   },
+   {
+    "word": "explicit",
+    "count": 2
+   },
+   {
+    "word": "obstruction",
+    "count": 2
+   },
+   {
+    "word": "norm",
+    "count": 2
+   },
+   {
+    "word": "ultrapower",
+    "count": 2
+   },
+   {
+    "word": "isomorphism",
+    "count": 2
+   },
+   {
+    "word": "group",
+    "count": 2
+   },
+   {
+    "word": "approximation",
+    "count": 2
+   },
+   {
+    "word": "arithmeticity",
+    "count": 2
+   },
+   {
+    "word": "twisted",
+    "count": 2
+   },
+   {
+    "word": "correspondences",
+    "count": 2
+   },
+   {
+    "word": "local",
+    "count": 2
+   },
+   {
+    "word": "fields",
+    "count": 2
+   },
+   {
+    "word": "backward",
+    "count": 2
+   },
+   {
+    "word": "intertwiners",
+    "count": 2
+   }
+  ],
+  "Partial differential equations": [
+   {
+    "word": "computation",
+    "count": 12
+   },
+   {
+    "word": "three",
+    "count": 10
+   },
+   {
+    "word": "one",
+    "count": 8
+   },
+   {
+    "word": "boltzmann",
+    "count": 8
+   },
+   {
+    "word": "forced",
+    "count": 6
+   },
+   {
+    "word": "navier",
+    "count": 6
+   },
+   {
+    "word": "stokes",
+    "count": 6
+   },
+   {
+    "word": "forcing",
+    "count": 6
+   },
+   {
+    "word": "flows",
+    "count": 6
+   },
+   {
+    "word": "smooth",
+    "count": 6
+   },
+   {
+    "word": "hard",
+    "count": 6
+   },
+   {
+    "word": "sphere",
+    "count": 6
+   },
+   {
+    "word": "interior",
+    "count": 6
+   },
+   {
+    "word": "nonuniqueness",
+    "count": 6
+   },
+   {
+    "word": "dimensions",
+    "count": 6
+   },
+   {
+    "word": "equation",
+    "count": 6
+   },
+   {
+    "word": "conjecture",
+    "count": 4
+   },
+   {
+    "word": "dimension",
+    "count": 4
+   },
+   {
+    "word": "boundary",
+    "count": 4
+   },
+   {
+    "word": "patch",
+    "count": 4
+   },
+   {
+    "word": "finite",
+    "count": 4
+   },
+   {
+    "word": "instructions",
+    "count": 4
+   },
+   {
+    "word": "solenoidal",
+    "count": 4
+   },
+   {
+    "word": "global",
+    "count": 4
+   },
+   {
+    "word": "uniqueness",
+    "count": 4
+   },
+   {
+    "word": "problem",
+    "count": 4
+   },
+   {
+    "word": "regular",
+    "count": 4
+   },
+   {
+    "word": "incompressible",
+    "count": 4
+   },
+   {
+    "word": "planar",
+    "count": 4
+   },
+   {
+    "word": "minimizers",
+    "count": 4
+   },
+   {
+    "word": "scalar",
+    "count": 4
+   },
+   {
+    "word": "potentials",
+    "count": 4
+   },
+   {
+    "word": "stable",
+    "count": 4
+   },
+   {
+    "word": "critical",
+    "count": 4
+   },
+   {
+    "word": "strong",
+    "count": 4
+   },
+   {
+    "word": "diffeomorphic",
+    "count": 4
+   },
+   {
+    "word": "approximation",
+    "count": 4
+   },
+   {
+    "word": "counterexample",
+    "count": 2
+   },
+   {
+    "word": "monge",
+    "count": 2
+   },
+   {
+    "word": "ansatz",
+    "count": 2
+   },
+   {
+    "word": "marginal",
+    "count": 2
+   },
+   {
+    "word": "coulomb",
+    "count": 2
+   },
+   {
+    "word": "cost",
+    "count": 2
+   },
+   {
+    "word": "fixed",
+    "count": 2
+   },
+   {
+    "word": "particle",
+    "count": 2
+   },
+   {
+    "word": "test",
+    "count": 2
+   },
+   {
+    "word": "viscous",
+    "count": 2
+   },
+   {
+    "word": "flow",
+    "count": 2
+   },
+   {
+    "word": "rapidly",
+    "count": 2
+   },
+   {
+    "word": "vanishing",
+    "count": 2
+   },
+   {
+    "word": "eight",
+    "count": 2
+   },
+   {
+    "word": "determination",
+    "count": 2
+   },
+   {
+    "word": "metric",
+    "count": 2
+   },
+   {
+    "word": "unitary",
+    "count": 2
+   },
+   {
+    "word": "connection",
+    "count": 2
+   },
+   {
+    "word": "shear",
+    "count": 2
+   },
+   {
+    "word": "geometric",
+    "count": 2
+   },
+   {
+    "word": "programs",
+    "count": 2
+   },
+   {
+    "word": "classical",
+    "count": 2
+   },
+   {
+    "word": "solutions",
+    "count": 2
+   }
+  ],
+  "Probability and statistical mechanics": [
+   {
+    "word": "critical",
+    "count": 44
+   },
+   {
+    "word": "model",
+    "count": 36
+   },
+   {
+    "word": "random",
+    "count": 34
+   },
+   {
+    "word": "planar",
+    "count": 28
+   },
+   {
+    "word": "ising",
+    "count": 26
+   },
+   {
+    "word": "universality",
+    "count": 20
+   },
+   {
+    "word": "honeycomb",
+    "count": 18
+   },
+   {
+    "word": "lattice",
+    "count": 18
+   },
+   {
+    "word": "free",
+    "count": 16
+   },
+   {
+    "word": "temperature",
+    "count": 14
+   },
+   {
+    "word": "maps",
+    "count": 14
+   },
+   {
+    "word": "percolation",
+    "count": 14
+   },
+   {
+    "word": "sherrington",
+    "count": 14
+   },
+   {
+    "word": "kirkpatrick",
+    "count": 14
+   },
+   {
+    "word": "limits",
+    "count": 14
+   },
+   {
+    "word": "sle",
+    "count": 13
+   },
+   {
+    "word": "law",
+    "count": 12
+   },
+   {
+    "word": "two",
+    "count": 12
+   },
+   {
+    "word": "field",
+    "count": 12
+   },
+   {
+    "word": "walks",
+    "count": 12
+   },
+   {
+    "word": "interfaces",
+    "count": 12
+   },
+   {
+    "word": "mass",
+    "count": 12
+   },
+   {
+    "word": "limit",
+    "count": 12
+   },
+   {
+    "word": "coordinate",
+    "count": 11
+   },
+   {
+    "word": "sweeps",
+    "count": 11
+   },
+   {
+    "word": "threshold",
+    "count": 10
+   },
+   {
+    "word": "tree",
+    "count": 10
+   },
+   {
+    "word": "spin",
+    "count": 10
+   },
+   {
+    "word": "dimensional",
+    "count": 10
+   },
+   {
+    "word": "weak",
+    "count": 10
+   },
+   {
+    "word": "sharp",
+    "count": 10
+   },
+   {
+    "word": "finite",
+    "count": 9
+   },
+   {
+    "word": "four",
+    "count": 8
+   },
+   {
+    "word": "state",
+    "count": 8
+   },
+   {
+    "word": "continuum",
+    "count": 8
+   },
+   {
+    "word": "singularity",
+    "count": 8
+   },
+   {
+    "word": "one",
+    "count": 8
+   },
+   {
+    "word": "fixed",
+    "count": 8
+   },
+   {
+    "word": "permutation",
+    "count": 8
+   },
+   {
+    "word": "exact",
+    "count": 8
+   },
+   {
+    "word": "bridge",
+    "count": 8
+   },
+   {
+    "word": "length",
+    "count": 8
+   },
+   {
+    "word": "correlation",
+    "count": 8
+   },
+   {
+    "word": "exponential",
+    "count": 8
+   },
+   {
+    "word": "energy",
+    "count": 8
+   },
+   {
+    "word": "graphs",
+    "count": 8
+   },
+   {
+    "word": "quenched",
+    "count": 8
+   },
+   {
+    "word": "polygon",
+    "count": 8
+   },
+   {
+    "word": "perceptron",
+    "count": 8
+   },
+   {
+    "word": "formula",
+    "count": 7
+   },
+   {
+    "word": "regular",
+    "count": 7
+   },
+   {
+    "word": "thorp",
+    "count": 7
+   },
+   {
+    "word": "reconstruction",
+    "count": 6
+   },
+   {
+    "word": "radial",
+    "count": 6
+   },
+   {
+    "word": "directional",
+    "count": 6
+   },
+   {
+    "word": "strict",
+    "count": 6
+   },
+   {
+    "word": "voronoi",
+    "count": 6
+   },
+   {
+    "word": "phase",
+    "count": 6
+   },
+   {
+    "word": "low",
+    "count": 6
+   },
+   {
+    "word": "conformal",
+    "count": 6
+   }
+  ],
+  "Real and complex analysis": [
+   {
+    "word": "conjecture",
+    "count": 12
+   },
+   {
+    "word": "hilbert",
+    "count": 10
+   },
+   {
+    "word": "transform",
+    "count": 10
+   },
+   {
+    "word": "dimensions",
+    "count": 10
+   },
+   {
+    "word": "bound",
+    "count": 8
+   },
+   {
+    "word": "three",
+    "count": 8
+   },
+   {
+    "word": "equation",
+    "count": 8
+   },
+   {
+    "word": "fourier",
+    "count": 6
+   },
+   {
+    "word": "convergence",
+    "count": 6
+   },
+   {
+    "word": "endpoint",
+    "count": 6
+   },
+   {
+    "word": "maximal",
+    "count": 6
+   },
+   {
+    "word": "triangular",
+    "count": 6
+   },
+   {
+    "word": "littlewood",
+    "count": 6
+   },
+   {
+    "word": "polynomials",
+    "count": 6
+   },
+   {
+    "word": "inverse",
+    "count": 4
+   },
+   {
+    "word": "uniform",
+    "count": 4
+   },
+   {
+    "word": "dyadic",
+    "count": 4
+   },
+   {
+    "word": "symmetric",
+    "count": 4
+   },
+   {
+    "word": "point",
+    "count": 4
+   },
+   {
+    "word": "minimal",
+    "count": 4
+   },
+   {
+    "word": "maxima",
+    "count": 4
+   },
+   {
+    "word": "real",
+    "count": 4
+   },
+   {
+    "word": "riesz",
+    "count": 4
+   },
+   {
+    "word": "local",
+    "count": 4
+   },
+   {
+    "word": "smoothing",
+    "count": 4
+   },
+   {
+    "word": "dimensional",
+    "count": 4
+   },
+   {
+    "word": "wave",
+    "count": 4
+   },
+   {
+    "word": "higher",
+    "count": 4
+   },
+   {
+    "word": "kakeya",
+    "count": 4
+   },
+   {
+    "word": "circle",
+    "count": 4
+   },
+   {
+    "word": "domain",
+    "count": 4
+   },
+   {
+    "word": "case",
+    "count": 4
+   },
+   {
+    "word": "similarity",
+    "count": 4
+   },
+   {
+    "word": "strict",
+    "count": 2
+   },
+   {
+    "word": "first",
+    "count": 2
+   },
+   {
+    "word": "power",
+    "count": 2
+   },
+   {
+    "word": "univalent",
+    "count": 2
+   },
+   {
+    "word": "functions",
+    "count": 2
+   },
+   {
+    "word": "estimate",
+    "count": 2
+   },
+   {
+    "word": "lipschitz",
+    "count": 2
+   },
+   {
+    "word": "directions",
+    "count": 2
+   },
+   {
+    "word": "almost",
+    "count": 2
+   },
+   {
+    "word": "everywhere",
+    "count": 2
+   },
+   {
+    "word": "gradient",
+    "count": 2
+   },
+   {
+    "word": "centered",
+    "count": 2
+   },
+   {
+    "word": "disk",
+    "count": 2
+   },
+   {
+    "word": "operator",
+    "count": 2
+   },
+   {
+    "word": "form",
+    "count": 2
+   },
+   {
+    "word": "trilinear",
+    "count": 2
+   },
+   {
+    "word": "annular",
+    "count": 2
+   },
+   {
+    "word": "variation",
+    "count": 2
+   },
+   {
+    "word": "asymptotically",
+    "count": 2
+   },
+   {
+    "word": "bochner",
+    "count": 2
+   },
+   {
+    "word": "multipliers",
+    "count": 2
+   },
+   {
+    "word": "sharp",
+    "count": 2
+   },
+   {
+    "word": "square",
+    "count": 2
+   },
+   {
+    "word": "integral",
+    "count": 2
+   },
+   {
+    "word": "means",
+    "count": 2
+   },
+   {
+    "word": "critical",
+    "count": 2
+   },
+   {
+    "word": "diagonal",
+    "count": 2
+   }
+  ],
+  "Theoretical computer science": [
+   {
+    "word": "time",
+    "count": 24
+   },
+   {
+    "word": "bound",
+    "count": 21
+   },
+   {
+    "word": "lower",
+    "count": 14
+   },
+   {
+    "word": "hardness",
+    "count": 14
+   },
+   {
+    "word": "polynomial",
+    "count": 14
+   },
+   {
+    "word": "uniform",
+    "count": 14
+   },
+   {
+    "word": "exact",
+    "count": 12
+   },
+   {
+    "word": "matrix",
+    "count": 12
+   },
+   {
+    "word": "games",
+    "count": 12
+   },
+   {
+    "word": "exponential",
+    "count": 10
+   },
+   {
+    "word": "two",
+    "count": 10
+   },
+   {
+    "word": "multiplication",
+    "count": 10
+   },
+   {
+    "word": "quasipolynomial",
+    "count": 10
+   },
+   {
+    "word": "gaussian",
+    "count": 10
+   },
+   {
+    "word": "approximation",
+    "count": 8
+   },
+   {
+    "word": "graphs",
+    "count": 8
+   },
+   {
+    "word": "three",
+    "count": 8
+   },
+   {
+    "word": "matching",
+    "count": 8
+   },
+   {
+    "word": "deterministic",
+    "count": 8
+   },
+   {
+    "word": "one",
+    "count": 8
+   },
+   {
+    "word": "factor",
+    "count": 8
+   },
+   {
+    "word": "mean",
+    "count": 8
+   },
+   {
+    "word": "payoff",
+    "count": 8
+   },
+   {
+    "word": "logarithmic",
+    "count": 8
+   },
+   {
+    "word": "weisfeiler",
+    "count": 8
+   },
+   {
+    "word": "leman",
+    "count": 8
+   },
+   {
+    "word": "complexity",
+    "count": 6
+   },
+   {
+    "word": "cut",
+    "count": 6
+   },
+   {
+    "word": "randomized",
+    "count": 6
+   },
+   {
+    "word": "perfect",
+    "count": 6
+   },
+   {
+    "word": "general",
+    "count": 6
+   },
+   {
+    "word": "trace",
+    "count": 6
+   },
+   {
+    "word": "reconstruction",
+    "count": 6
+   },
+   {
+    "word": "space",
+    "count": 6
+   },
+   {
+    "word": "common",
+    "count": 6
+   },
+   {
+    "word": "sensitivity",
+    "count": 6
+   },
+   {
+    "word": "way",
+    "count": 6
+   },
+   {
+    "word": "bounded",
+    "count": 6
+   },
+   {
+    "word": "threshold",
+    "count": 6
+   },
+   {
+    "word": "constant",
+    "count": 6
+   },
+   {
+    "word": "arbitrary",
+    "count": 6
+   },
+   {
+    "word": "generalized",
+    "count": 6
+   },
+   {
+    "word": "star",
+    "count": 6
+   },
+   {
+    "word": "height",
+    "count": 6
+   },
+   {
+    "word": "information",
+    "count": 6
+   },
+   {
+    "word": "memory",
+    "count": 6
+   },
+   {
+    "word": "regression",
+    "count": 6
+   },
+   {
+    "word": "hitting",
+    "count": 6
+   },
+   {
+    "word": "equivalence",
+    "count": 6
+   },
+   {
+    "word": "every",
+    "count": 6
+   },
+   {
+    "word": "metric",
+    "count": 6
+   },
+   {
+    "word": "power",
+    "count": 5
+   },
+   {
+    "word": "scheme",
+    "count": 4
+   },
+   {
+    "word": "worst",
+    "count": 4
+   },
+   {
+    "word": "case",
+    "count": 4
+   },
+   {
+    "word": "algorithm",
+    "count": 4
+   },
+   {
+    "word": "subset",
+    "count": 4
+   },
+   {
+    "word": "sum",
+    "count": 4
+   },
+   {
+    "word": "gaps",
+    "count": 4
+   },
+   {
+    "word": "almost",
+    "count": 4
+   }
+  ],
+  "Topology": [
+   {
+    "word": "chromatic",
+    "count": 12
+   },
+   {
+    "word": "conjecture",
+    "count": 10
+   },
+   {
+    "word": "finite",
+    "count": 10
+   },
+   {
+    "word": "prime",
+    "count": 10
+   },
+   {
+    "word": "three",
+    "count": 10
+   },
+   {
+    "word": "four",
+    "count": 8
+   },
+   {
+    "word": "counterexample",
+    "count": 8
+   },
+   {
+    "word": "sphere",
+    "count": 8
+   },
+   {
+    "word": "obstruction",
+    "count": 6
+   },
+   {
+    "word": "smith",
+    "count": 6
+   },
+   {
+    "word": "rational",
+    "count": 6
+   },
+   {
+    "word": "splitting",
+    "count": 6
+   },
+   {
+    "word": "height",
+    "count": 6
+   },
+   {
+    "word": "dimension",
+    "count": 6
+   },
+   {
+    "word": "dimensional",
+    "count": 4
+   },
+   {
+    "word": "disk",
+    "count": 4
+   },
+   {
+    "word": "embedding",
+    "count": 4
+   },
+   {
+    "word": "coarse",
+    "count": 4
+   },
+   {
+    "word": "problem",
+    "count": 4
+   },
+   {
+    "word": "toda",
+    "count": 4
+   },
+   {
+    "word": "complex",
+    "count": 4
+   },
+   {
+    "word": "tensor",
+    "count": 4
+   },
+   {
+    "word": "aspherical",
+    "count": 4
+   },
+   {
+    "word": "manifold",
+    "count": 4
+   },
+   {
+    "word": "model",
+    "count": 4
+   },
+   {
+    "word": "two",
+    "count": 4
+   },
+   {
+    "word": "failure",
+    "count": 4
+   },
+   {
+    "word": "assembly",
+    "count": 4
+   },
+   {
+    "word": "overlap",
+    "count": 4
+   },
+   {
+    "word": "local",
+    "count": 4
+   },
+   {
+    "word": "homotopy",
+    "count": 4
+   },
+   {
+    "word": "every",
+    "count": 4
+   },
+   {
+    "word": "boundary",
+    "count": 2
+   },
+   {
+    "word": "novikov",
+    "count": 2
+   },
+   {
+    "word": "marked",
+    "count": 2
+   },
+   {
+    "word": "group",
+    "count": 2
+   },
+   {
+    "word": "without",
+    "count": 2
+   },
+   {
+    "word": "strong",
+    "count": 2
+   },
+   {
+    "word": "hahn",
+    "count": 2
+   },
+   {
+    "word": "wilson",
+    "count": 2
+   },
+   {
+    "word": "weak",
+    "count": 2
+   },
+   {
+    "word": "kernels",
+    "count": 2
+   },
+   {
+    "word": "descent",
+    "count": 2
+   },
+   {
+    "word": "exponents",
+    "count": 2
+   },
+   {
+    "word": "cyclic",
+    "count": 2
+   },
+   {
+    "word": "length",
+    "count": 2
+   },
+   {
+    "word": "fixed",
+    "count": 2
+   },
+   {
+    "word": "point",
+    "count": 2
+   },
+   {
+    "word": "loss",
+    "count": 2
+   },
+   {
+    "word": "injectivity",
+    "count": 2
+   },
+   {
+    "word": "maximal",
+    "count": 2
+   },
+   {
+    "word": "filtered",
+    "count": 2
+   },
+   {
+    "word": "generic",
+    "count": 2
+   },
+   {
+    "word": "generation",
+    "count": 2
+   },
+   {
+    "word": "varying",
+    "count": 2
+   },
+   {
+    "word": "nonhomeomorphic",
+    "count": 2
+   },
+   {
+    "word": "closed",
+    "count": 2
+   },
+   {
+    "word": "type",
+    "count": 2
+   },
+   {
+    "word": "purely",
+    "count": 2
+   },
+   {
+    "word": "cosmetic",
+    "count": 2
+   }
+  ],
+  "Unclassified": [
+   {
+    "word": "conjecture",
+    "count": 12
+   },
+   {
+    "word": "compact",
+    "count": 12
+   },
+   {
+    "word": "abelian",
+    "count": 10
+   },
+   {
+    "word": "elliptic",
+    "count": 8
+   },
+   {
+    "word": "curves",
+    "count": 8
+   },
+   {
+    "word": "rational",
+    "count": 8
+   },
+   {
+    "word": "two",
+    "count": 8
+   },
+   {
+    "word": "hodge",
+    "count": 8
+   },
+   {
+    "word": "classes",
+    "count": 8
+   },
+   {
+    "word": "fourfolds",
+    "count": 8
+   },
+   {
+    "word": "hler",
+    "count": 7
+   },
+   {
+    "word": "converse",
+    "count": 6
+   },
+   {
+    "word": "surfaces",
+    "count": 6
+   },
+   {
+    "word": "kahler",
+    "count": 6
+   },
+   {
+    "word": "manifolds",
+    "count": 6
+   },
+   {
+    "word": "selmer",
+    "count": 6
+   },
+   {
+    "word": "prime",
+    "count": 6
+   },
+   {
+    "word": "lipschitz",
+    "count": 6
+   },
+   {
+    "word": "limit",
+    "count": 6
+   },
+   {
+    "word": "correspondences",
+    "count": 4
+   },
+   {
+    "word": "powers",
+    "count": 4
+   },
+   {
+    "word": "algebraicity",
+    "count": 4
+   },
+   {
+    "word": "weil",
+    "count": 4
+   },
+   {
+    "word": "minimal",
+    "count": 4
+   },
+   {
+    "word": "four",
+    "count": 4
+   },
+   {
+    "word": "birch",
+    "count": 4
+   },
+   {
+    "word": "swinnerton",
+    "count": 4
+   },
+   {
+    "word": "dyer",
+    "count": 4
+   },
+   {
+    "word": "formula",
+    "count": 4
+   },
+   {
+    "word": "corank",
+    "count": 4
+   },
+   {
+    "word": "finite",
+    "count": 4
+   },
+   {
+    "word": "model",
+    "count": 4
+   },
+   {
+    "word": "modularity",
+    "count": 4
+   },
+   {
+    "word": "gaussian",
+    "count": 4
+   },
+   {
+    "word": "free",
+    "count": 4
+   },
+   {
+    "word": "field",
+    "count": 4
+   },
+   {
+    "word": "integer",
+    "count": 4
+   },
+   {
+    "word": "heights",
+    "count": 4
+   },
+   {
+    "word": "analytic",
+    "count": 4
+   },
+   {
+    "word": "log",
+    "count": 4
+   },
+   {
+    "word": "spaces",
+    "count": 4
+   },
+   {
+    "word": "varieties",
+    "count": 4
+   },
+   {
+    "word": "termination",
+    "count": 4
+   },
+   {
+    "word": "generalized",
+    "count": 4
+   },
+   {
+    "word": "canonical",
+    "count": 4
+   },
+   {
+    "word": "flips",
+    "count": 4
+   },
+   {
+    "word": "withdrawal",
+    "count": 3
+   },
+   {
+    "word": "notice",
+    "count": 3
+   },
+   {
+    "word": "pointwise",
+    "count": 2
+   },
+   {
+    "word": "torsion",
+    "count": 2
+   },
+   {
+    "word": "covers",
+    "count": 2
+   },
+   {
+    "word": "gale",
+    "count": 2
+   },
+   {
+    "word": "kuga",
+    "count": 2
+   },
+   {
+    "word": "satake",
+    "count": 2
+   },
+   {
+    "word": "split",
+    "count": 2
+   },
+   {
+    "word": "eightfolds",
+    "count": 2
+   },
+   {
+    "word": "conditional",
+    "count": 2
+   },
+   {
+    "word": "good",
+    "count": 2
+   },
+   {
+    "word": "deforming",
+    "count": 2
+   },
+   {
+    "word": "hypersymplectic",
+    "count": 2
+   }
+  ]
+ },
+ "top_terms": [
+  {
+   "word": "conjecture",
+   "count": 163
+  },
+  {
+   "word": "dimension",
+   "count": 96
+  },
+  {
+   "word": "bound",
+   "count": 92
+  },
+  {
+   "word": "finite",
+   "count": 84
+  },
+  {
+   "word": "counterexample",
+   "count": 76
+  },
+  {
+   "word": "three",
+   "count": 69
+  },
+  {
+   "word": "two",
+   "count": 68
+  },
+  {
+   "word": "uniform",
+   "count": 64
+  },
+  {
+   "word": "model",
+   "count": 64
+  },
+  {
+   "word": "group",
+   "count": 57
+  },
+  {
+   "word": "one",
+   "count": 54
+  },
+  {
+   "word": "critical",
+   "count": 53
+  },
+  {
+   "word": "four",
+   "count": 52
+  },
+  {
+   "word": "planar",
+   "count": 50
+  },
+  {
+   "word": "free",
+   "count": 49
+  },
+  {
+   "word": "polynomial",
+   "count": 48
+  },
+  {
+   "word": "prime",
+   "count": 47
+  },
+  {
+   "word": "space",
+   "count": 47
+  },
+  {
+   "word": "dimensional",
+   "count": 46
+  },
+  {
+   "word": "time",
+   "count": 44
+  },
+  {
+   "word": "positive",
+   "count": 44
+  },
+  {
+   "word": "inequality",
+   "count": 42
+  },
+  {
+   "word": "every",
+   "count": 42
+  },
+  {
+   "word": "compact",
+   "count": 42
+  },
+  {
+   "word": "log",
+   "count": 41
+  },
+  {
+   "word": "field",
+   "count": 40
+  },
+  {
+   "word": "limit",
+   "count": 40
+  },
+  {
+   "word": "bounded",
+   "count": 38
+  },
+  {
+   "word": "sharp",
+   "count": 38
+  },
+  {
+   "word": "number",
+   "count": 37
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenAI 开源数学证明的词云图 | 1024 造物挑战</title>
+  <meta name="description" content="对 OpenAI 开源的数学手稿仓库 openai/math（751 篇手稿、373 个问题族）做词云分析：全库总词云、按数学学科拆分的分词云、高频术语排行，还有一张手稿关系图，外加分析方法说明。">
+  <link rel="stylesheet" href="css/style-paper.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <p class="hero-badge">WorkBuddy「1024 造物挑战」程序员节应用创作大赛</p>
+      <h1>OpenAI 开源数学证明的<span class="accent">词云图</span></h1>
+      <p class="hero-sub">
+        2026 年 10 月 6 日，OpenAI 公开了内部模型产出的数学手稿仓库
+        <a href="https://github.com/openai/math" target="_blank" rel="noopener">openai/math</a>。
+        本站不逐篇读证明，只把 <b>751 篇手稿</b>的目录名和 README 丢进词频统计，
+        看看这批 AI 数学成果都爱用什么词。
+      </p>
+      <div class="stat-chips" id="stat-chips">
+        <span class="chip">加载中…</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="graph" class="section">
+      <h2>一、手稿关系图</h2>
+      <p class="section-desc">
+        每篇手稿一个小节点，用边挂到自己的问题族上；同学科的族再互相连一手，所以每个学科抱成一团。
+        大的是族，小的是手稿，颜色跟学科走。可以拖、可以缩放，点节点看详情。
+      </p>
+      <div class="graph-controls">
+        <input id="graph-search" type="text" placeholder="搜索标题关键词…" autocomplete="off">
+        <select id="graph-discipline">
+          <option value="">全部学科</option>
+        </select>
+        <button id="graph-reheat" type="button">重新布局</button>
+      </div>
+      <div class="cloud-frame graph-frame">
+        <svg id="family-graph" aria-label="手稿关系图"></svg>
+        <div id="graph-info" class="graph-info" hidden></div>
+      </div>
+      <p class="graph-hint">共 <span id="graph-count">…</span>。未在 overview.tex 中登记的 31 篇手稿无 family 归属，显示为灰色散点。</p>
+    </section>
+    <section id="overall" class="section">
+      <h2>二、全库词云</h2>
+      <p class="section-desc">
+        语料是全部手稿的目录名加每篇的 README.md，去掉了停用词，合并了单复数。
+        字号跟着词频走，颜色按词的主导学科上。
+      </p>
+      <div class="cloud-frame">
+        <canvas id="cloud-overall" aria-label="全库词云图"></canvas>
+      </div>
+    </section>
+
+    <section id="by-discipline" class="section">
+      <h2>三、分学科词云</h2>
+      <p class="section-desc">
+        仓库把 373 个问题族按数学学科分类。切换学科，看每个领域自己的行话。
+      </p>
+      <div class="tabs" id="discipline-tabs"><!-- JS 填充 --></div>
+      <div class="cloud-frame cloud-frame-sm">
+        <canvas id="cloud-discipline" aria-label="分学科词云图"></canvas>
+      </div>
+    </section>
+
+    <section id="top-terms" class="section">
+      <h2>四、高频术语 Top 30</h2>
+      <p class="section-desc">还是那 30 个词，换成直条，方便对照谁占大头。</p>
+      <ol class="bar-list" id="bar-list"><!-- JS 填充 --></ol>
+    </section>
+
+
+    <section id="method" class="section">
+      <h2>五、分析与制图方法</h2>
+      <div class="method-grid">
+        <div class="method-card">
+          <h3>语料</h3>
+          <ul>
+            <li><b>目录名</b>：preprints/ 下每篇手稿的目录名（含标题式命名）</li>
+            <li><b>README.md</b>：每篇手稿的自述文件</li>
+            <li><b>CONTENTS.md</b>：问题族索引，提供学科分类标签</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h3>分析</h3>
+          <ul>
+            <li>分词后过滤停用词（the / of / a / proof 等无区分度词）</li>
+            <li>小写归一、去连字符变体、合并简单单复数</li>
+            <li>按学科标签聚合，得到分维度词频</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h3>制图</h3>
+          <ul>
+            <li>离线 Python 脚本产出 <code>data/words.json</code> 与 <code>data/graph.json</code></li>
+            <li>词云：<a href="https://github.com/timdream/wordcloud2.js" target="_blank" rel="noopener">wordcloud2.js</a> 渲染，字号线性映射词频</li>
+            <li>关系图：<a href="https://d3js.org" target="_blank" rel="noopener">D3 force</a> 力导向布局，按问题族连边</li>
+            <li>纯静态、零构建，直接挂 GitHub Pages</li>
+          </ul>
+        </div>
+        <div class="method-card">
+          <h3>边界</h3>
+          <ul>
+            <li>只统计目录名与 README，未读正文 PDF</li>
+            <li>仓库收录 ≠ 结果经过同行评审；部分结果尚未 Lean 形式化</li>
+            <li>数据截至本次 clone 时的仓库快照</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        数据来源：<a href="https://github.com/openai/math" target="_blank" rel="noopener">github.com/openai/math</a>
+        （Apache-2.0）· 制图与分析：WorkBuddy「1024 造物挑战」参赛作品
+      </p>
+      <p class="footer-note">本站为词频统计的可视化，不代表对任何数学结果的正确性背书。</p>
+    </div>
+  </footer>
+
+  <script src="js/wordcloud2.js"></script>
+  <script src="js/d3.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/graph.js"></script>
+</body>
+</html>

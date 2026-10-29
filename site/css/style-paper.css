@@ -1,0 +1,318 @@
+/* OpenAI math 词云图 — 纸面手稿主题（v2）
+   底色暖纸 + 坐标纸网格，印章红点缀，衬线标题。
+   旧版样式保留在 style.css，回滚只需换回 <link>。 */
+
+:root {
+  --bg: #f5f1e8;
+  --surface: #fffdf8;
+  --ink: #26221c;
+  --ink-soft: #6f6656;
+  --line: #ddd4c0;
+  --line-strong: #c9bda3;
+  --accent: #a63d2f;      /* 印章红 */
+  --accent-2: #2f5d8a;    /* 墨蓝 */
+  --radius: 4px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, "Times New Roman", "STZhongsong", "SimSun", serif;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(47, 93, 138, .045) 27px 28px),
+    repeating-linear-gradient(90deg, transparent 0 27px, rgba(47, 93, 138, .045) 27px 28px),
+    var(--bg);
+  color: var(--ink);
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+a { color: var(--accent-2); text-decoration: none; }
+a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+
+b { font-weight: 700; }
+
+/* ---------- hero ---------- */
+.hero {
+  padding: 72px 0 48px;
+  border-bottom: 3px double var(--line-strong);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, .6), transparent 70%);
+}
+
+.hero-badge {
+  display: inline-block;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 3px;
+  padding: 4px 14px;
+  margin-bottom: 20px;
+  transform: rotate(-1.2deg);
+  background: rgba(166, 61, 47, .04);
+}
+
+.hero h1 {
+  font-size: clamp(30px, 4.6vw, 46px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.hero .accent { color: var(--accent); }
+
+.hero-sub {
+  max-width: 720px;
+  margin-top: 18px;
+  color: var(--ink-soft);
+  font-size: 16.5px;
+}
+
+.hero-sub b { color: var(--ink); }
+
+.stat-chips { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; }
+
+.chip {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  padding: 5px 14px;
+  font-size: 13.5px;
+  box-shadow: 1px 1px 0 rgba(38, 34, 28, .06);
+}
+
+.chip b { color: var(--accent); }
+
+/* ---------- sections ---------- */
+.section { padding: 52px 0 8px; }
+
+.section h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-left: 14px;
+  border-left: 4px solid var(--accent);
+}
+
+.section-desc { color: var(--ink-soft); font-size: 15px; max-width: 720px; }
+
+.cloud-frame {
+  margin-top: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 2px 3px 0 rgba(38, 34, 28, .05);
+}
+
+.cloud-frame canvas { width: 100%; height: 520px; display: block; }
+.cloud-frame-sm canvas { height: 440px; }
+
+/* ---------- discipline tabs ---------- */
+.tabs {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+}
+
+.tab {
+  font-family: Georgia, "STZhongsong", "SimSun", serif;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background: none;
+  padding: 6px 2px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color .15s ease;
+}
+
+.tab:hover { color: var(--accent); }
+
+.tab.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- top terms bar list ---------- */
+.bar-list {
+  list-style: none;
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 36px;
+  counter-reset: term;
+}
+
+.bar-list li {
+  display: grid;
+  grid-template-columns: 2em 9em 1fr 4.5em;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+}
+
+.bar-list .rank {
+  color: var(--accent);
+  font-style: italic;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.bar-list .term { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-list .bar { height: 9px; border-radius: 0; background: var(--accent-2); opacity: .8; }
+.bar-list .count { color: var(--ink-soft); text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- graph ---------- */
+.graph-controls {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.graph-controls input[type="text"] {
+  flex: 1 1 220px;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  padding: 7px 12px;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.graph-controls input[type="text"]:focus { outline: 2px solid var(--accent-2); }
+
+.graph-controls select {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  padding: 7px 10px;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--ink);
+  max-width: 280px;
+}
+
+.graph-controls button {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  padding: 7px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  background: var(--surface);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.graph-controls button:hover { background: var(--accent); color: #fffdf8; }
+
+.graph-frame { position: relative; padding: 0; overflow: hidden; }
+.graph-frame svg { width: 100%; height: 640px; display: block; }
+
+.graph-info {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  max-width: 330px;
+  background: rgba(255, 253, 248, .97);
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--accent);
+  border-radius: 2px;
+  padding: 14px 16px;
+  box-shadow: 2px 3px 0 rgba(38, 34, 28, .08);
+  font-size: 13.5px;
+}
+
+.graph-info .info-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.graph-info .info-type {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.graph-info .info-title { font-weight: 700; margin: 5px 0 7px; font-size: 14.5px; }
+.graph-info .info-meta { color: var(--ink-soft); }
+
+.graph-hint { margin-top: 12px; font-size: 13.5px; color: var(--ink-soft); font-style: italic; }
+
+/* ---------- method ---------- */
+.method-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.method-card {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 2px 3px 0 rgba(38, 34, 28, .05);
+}
+
+.method-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.method-card h3::before { content: "§ "; color: var(--accent); font-style: normal; }
+
+.method-card ul { padding-left: 18px; font-size: 14px; color: var(--ink-soft); }
+.method-card li { margin-bottom: 7px; }
+
+.method-card code {
+  font-family: Consolas, "Courier New", monospace;
+  background: rgba(47, 93, 138, .08);
+  border-radius: 2px;
+  padding: 1px 5px;
+  font-size: 12.5px;
+  color: var(--accent-2);
+}
+
+/* ---------- footer ---------- */
+footer {
+  margin-top: 64px;
+  padding: 28px 0 36px;
+  border-top: 3px double var(--line-strong);
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.footer-note { margin-top: 6px; font-size: 12.5px; opacity: .8; font-style: italic; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 720px) {
+  .bar-list { grid-template-columns: 1fr; }
+  .cloud-frame canvas { height: 380px; }
+  .graph-frame svg { height: 480px; }
+}

@@ -1,0 +1,260 @@
+/* OpenAI math 词云图 — 纯静态样式，浅色主题 */
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --ink: #1a2233;
+  --ink-soft: #5a6478;
+  --line: #e4e8ef;
+  --accent: #2563eb;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- hero ---------- */
+.hero {
+  padding: 72px 0 48px;
+  background:
+    radial-gradient(600px 300px at 85% -10%, rgba(37, 99, 235, .10), transparent),
+    radial-gradient(500px 260px at 10% 0%, rgba(139, 92, 246, .08), transparent);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--accent);
+  background: rgba(37, 99, 235, .08);
+  border: 1px solid rgba(37, 99, 235, .25);
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4.5vw, 44px);
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.hero .accent { color: var(--accent); }
+
+.hero-sub {
+  max-width: 760px;
+  margin-top: 16px;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+.stat-chips { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px; }
+
+.chip {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chip b { color: var(--accent); }
+
+/* ---------- sections ---------- */
+.section { padding: 48px 0 8px; }
+
+.section h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+
+.section-desc { color: var(--ink-soft); font-size: 14.5px; max-width: 720px; }
+
+.cloud-frame {
+  margin-top: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, .04);
+}
+
+.cloud-frame canvas { width: 100%; height: 520px; display: block; }
+.cloud-frame-sm canvas { height: 440px; }
+
+/* ---------- graph ---------- */
+.graph-controls {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.graph-controls input[type="text"] {
+  flex: 1 1 220px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.graph-controls select {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--ink);
+  max-width: 280px;
+}
+
+.graph-controls button {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--surface);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.graph-controls button:hover { border-color: var(--accent); }
+
+.graph-frame { position: relative; padding: 0; overflow: hidden; }
+.graph-frame svg { width: 100%; height: 640px; display: block; }
+
+.graph-info {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, .96);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 14px rgba(16, 24, 40, .10);
+  font-size: 13.5px;
+}
+
+.graph-info .info-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.graph-info .info-type { font-size: 11.5px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .5px; }
+.graph-info .info-title { font-weight: 700; margin: 4px 0 6px; }
+.graph-info .info-meta { color: var(--ink-soft); }
+
+.graph-hint { margin-top: 12px; font-size: 13px; color: var(--ink-soft); }
+
+/* ---------- discipline tabs ---------- */
+.tabs {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.tab:hover { border-color: var(--accent); color: var(--accent); }
+
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---------- top terms bar list ---------- */
+.bar-list {
+  list-style: none;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+}
+
+.bar-list li {
+  display: grid;
+  grid-template-columns: 2em 9em 1fr 4.5em;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.bar-list .rank { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.bar-list .term { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-list .bar { height: 10px; border-radius: 5px; background: var(--accent); opacity: .85; }
+.bar-list .count { color: var(--ink-soft); text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- method ---------- */
+.method-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.method-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.method-card h3 { font-size: 16px; margin-bottom: 10px; color: var(--accent); }
+.method-card ul { padding-left: 18px; font-size: 13.5px; color: var(--ink-soft); }
+.method-card li { margin-bottom: 6px; }
+.method-card code {
+  background: rgba(37, 99, 235, .07);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 12.5px;
+}
+
+/* ---------- footer ---------- */
+footer {
+  margin-top: 64px;
+  padding: 28px 0 36px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.footer-note { margin-top: 6px; font-size: 12.5px; opacity: .75; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 720px) {
+  .bar-list { grid-template-columns: 1fr; }
+  .cloud-frame canvas { height: 380px; }
+  .graph-frame svg { height: 480px; }
+}
