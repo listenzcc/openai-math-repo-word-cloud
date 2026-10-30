@@ -12,6 +12,11 @@
   --accent: #a63d2f;      /* 印章红 */
   --accent-2: #2f5d8a;    /* 墨蓝 */
   --radius: 4px;
+  --leaf: #a49d8d;        /* 叶点 / 无族散点 */
+  --link: rgba(38, 34, 28, .10);
+  --band: rgba(47, 93, 138, .09);   /* fine 指针；视觉预授权 7%→9%（7% 对纸底 1.4:1 低于可辨阈值） */
+  --band-coarse: rgba(47, 93, 138, .10);
+  --focus: #2f5d8a;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -315,4 +320,517 @@ footer {
   .bar-list { grid-template-columns: 1fr; }
   .cloud-frame canvas { height: 380px; }
   .graph-frame svg { height: 480px; }
+}
+
+/* ==========================================================================
+   学科树 (tree) — v1.3 数值
+   容器沿用 .cloud-frame 的语言（--surface 底、1px --line、圆角 4px、硬投影）。
+   桌面/平板走 SVG 三列 tidy tree；≤640px 走 DOM 行列表（两层，无连线）。
+   ========================================================================== */
+
+.tree-frame {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  height: 640px;
+  max-height: 72vh;
+}
+
+/* 滚动容器：内边距 20/24，纵向滚动，绝不出横向滚动条 */
+.tree-scroll {
+  height: 100%;
+  padding: 20px 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* 必须写死 auto：scrollIntoView 会继承容器的 scroll-behavior，
+     若继承到站内 smooth，键盘焦点会“追着动画跑”。 */
+  scroll-behavior: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tree-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+.tree-scroll::-webkit-scrollbar-track { background: transparent; }
+.tree-scroll::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 0; }
+
+.tree-scroll svg {
+  display: block;
+  background: transparent;   /* 透出 body 的坐标纸网格 */
+}
+.tree-scroll svg[hidden] { display: none; }
+.tree-scroll svg:focus { outline: none; }
+
+/* --- 单元素 hover band：只移动，不新建，重叠区天然只有一条 ---
+   注意显隐必须走 .is-on 类，不能用 setAttribute("opacity")：
+   presentation attribute 的优先级低于本表里的 opacity:0，写属性永远不生效。 */
+.tree-band {
+  fill: var(--band);
+  opacity: 0;
+  transition: transform 160ms ease-out, opacity 120ms ease-out;
+  pointer-events: none;
+}
+.tree-band.is-on { opacity: 1; }
+.tree-band.is-coarse { fill: var(--band-coarse); }
+.tree-band.is-instant { transition: none; }
+
+/* --- focus 环：实色 2px，offset 4px，画在 band 之上 --- */
+.tree-focus-ring {
+  fill: none;
+  stroke: var(--focus);
+  stroke-width: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+.tree-focus-ring.is-on { opacity: 1; }
+
+/* --- 行 --- */
+.tree-row { cursor: pointer; transition: opacity 160ms ease-out; }
+.tree-row.is-dim { opacity: .35; }
+
+.tree-dot,
+.tree-ring,
+.tree-inner,
+.tree-label,
+.tree-label-bg,
+.tree-count,
+.tree-badge,
+.tree-badge-bg { pointer-events: none; }
+
+.tree-dot--family { fill: var(--surface); }
+
+/* 叶点 hover / 选中 / 焦点时加深到墨色：13px 行距里 2.8px 的灰点只有靠
+   明度跳动才抓得住视线。无族散叶是空心环，只加深描边、不填实，
+   免得一 hover 就和普通实心叶点混成一样。 */
+.tree-row--leaf.is-hot .tree-dot,
+.tree-row--leaf.is-sel .tree-dot,
+.tree-row--leaf.is-focus .tree-dot { fill: var(--ink); }
+
+.tree-row--leaf.is-loose.is-hot .tree-dot,
+.tree-row--leaf.is-loose.is-sel .tree-dot,
+.tree-row--leaf.is-loose.is-focus .tree-dot { fill: none; stroke: var(--ink); }
+.tree-ring { transition: opacity 160ms ease-out; }
+.tree-inner { transition: opacity 160ms ease-out; }
+
+/* 族标签铺一小块纸底，让 n=1 族退化成水平线时线在字下断开 */
+.tree-label-bg { fill: var(--surface); }
+
+/* --- 标签 --- */
+.tree-label--discipline {
+  font: 700 15px/1 Georgia, "STZhongsong", "SimSun", serif;
+  fill: var(--ink);
+}
+
+.tree-label--family {
+  font: 600 13px/1 Georgia, "STZhongsong", "SimSun", serif;
+  fill: var(--ink);
+}
+
+/* 叶无常态标签：仅 hover / focus / 选中 / 搜索命中时出现。
+   浮现即墨色（--ink），不能是 --ink-soft —— 浅灰会被读成禁用态。
+
+   宽度不在这里写死 —— 由 js/tree.js 用 canvas measureText 逐条量出来：
+     cap = max(110, min(leafCap, 内容宽 - leafPad))
+   两条独立链，别为「凑相等」去削字数：
+     wide (≥881)    leafCap 408 · leafPad 620
+     mid  (641–880) leafCap 240 · leafPad 490
+   不变量写成关系式，别写成绝对值：
+     「max-width 保证叶标签右缘与 rail 左缘的 gap ≥ 12px；式子 binding 时恰为 12px」
+   @880 是 240px 上限封顶，实测 gap 39px（不是 12）—— 这是对的，不是缺陷。
+   408px / 1016px 是**防御性上限**（容器超宽时才生效），不是验收目标；
+   真实站点内容宽恒 972 时为 min(408, 972-620)=352、min(960, 1016)=960，两个上限都不 binding。
+   验收看 gap ≥ 12 与 W 相对式子，别拿「34 字」「rail 钉 1016」当标准。
+
+   contentWidth() headless 实测锚点（视口 → 内容宽）：
+     375 → 293（移动端 DOM 列表档，无 SVG 列位，徽标槽 34）
+     640 → 533（移动端；与 375 不同是因为该档容器横向内边距是 24 而不是 16）
+     880 → 757（mid，槽 26，叶标签左缘 440，cap 240 → 右缘 680，rail 719–745，gap 39）
+     881 → 758（wide，槽 44，叶标签左缘 552，cap 138 → 右缘 690，rail 702–746，gap 12）
+    1120 → 972（wide，容器封顶后不再变宽，cap 352 → 右缘 904，rail 916–960，gap 12）
+    1280 → 972（同上）*/
+.tree-label--leaf {
+  font: 400 12px/1 Georgia, "STZhongsong", "SimSun", serif;
+  fill: var(--ink);
+  opacity: 0;
+  transition: opacity 160ms ease-out;
+}
+
+.tree-row--leaf.is-hot .tree-label--leaf,
+.tree-row--leaf:hover .tree-label--leaf,
+.tree-row--leaf.is-sel .tree-label--leaf,
+.tree-row--leaf.is-match .tree-label--leaf,
+.tree-row--leaf.is-focus .tree-label--leaf { opacity: 1; }
+
+.tree-count {
+  font: 400 11px/1 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  fill: var(--ink-soft);
+}
+
+.tree-badge {
+  font: 400 11px/1 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  fill: var(--ink-soft);
+}
+.tree-badge-bg { fill: rgba(47, 93, 138, .07); }
+.tree-badge-slot.is-empty { visibility: hidden; }
+
+/* --- 连线：正交 elbow，无曲线无箭头 --- */
+.tree-link {
+  fill: none;
+  stroke: var(--link);
+  stroke-linecap: square;
+  transition: stroke 160ms ease-out, stroke-width 160ms ease-out;
+}
+.tree-link.is-dim { opacity: .35; }
+
+/* --- 全部折叠按钮：容器右上，视觉 28px，命中 40px --- */
+.tree-collapse-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 2;
+  height: 28px;
+  padding: 0 12px;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 rgba(38, 34, 28, .05);
+  cursor: pointer;
+  transition: background 120ms ease-out, border-color 120ms ease-out,
+              box-shadow 120ms ease-out, transform 120ms ease-out;
+}
+
+.tree-collapse-btn::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+}
+
+.tree-collapse-btn:hover {
+  background: rgba(47, 93, 138, .06);
+  border-color: var(--line-strong);
+}
+
+.tree-collapse-btn:active {
+  box-shadow: 1px 1px 0 rgba(38, 34, 28, .05);
+  transform: translateY(1px);
+}
+
+.tree-collapse-btn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* --- 状态占位 / 空态 --- */
+.tree-status {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  background: var(--surface);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.tree-status[hidden] { display: none; }
+.tree-status p { margin: 0; }
+
+.tree-status-btn {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--surface);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.tree-status-btn:hover { background: var(--accent); color: #fffdf8; }
+
+/* --- 详情卡：桌面复用 .graph-info 的类 --- */
+.tree-info {
+  top: 14px;
+  left: 14px;
+  z-index: 4;
+  max-height: calc(100% - 28px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.tree-info[hidden] { display: none; }
+
+.tree-info .info-list {
+  list-style: none;
+  margin: 9px 0 0;
+  padding: 6px 0 0;
+  max-height: 168px;
+  overflow-y: auto;
+  border-top: 1px solid var(--line);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.tree-info .info-list li {
+  font-size: 12.5px;
+  line-height: 1.5;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tree-info .info-list li:last-child { border-bottom: none; }
+
+/* --- 屏幕阅读器播报区 --- */
+.tree-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   ≤640px：DOM 行列表，两层
+   ========================================================================== */
+.tree-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.tree-list[hidden] { display: none; }
+
+.tree-mrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 160ms ease-out;
+}
+
+.tree-mrow--f {
+  height: 28px;
+  padding-left: 16px;
+}
+
+/* 1px 导引竖线 x≈7px */
+.tree-mrow--f::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line);
+}
+
+.tree-mrow:active { background: var(--band-coarse); }
+
+.tree-mrow[hidden] { display: none; }
+
+.tree-mrow.is-focus {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+
+.tree-mrow.is-dim { opacity: .35; }
+
+.tree-mrow.is-match { background: rgba(166, 61, 47, .07); }
+
+.tree-mdot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tree-mrow--f .tree-mdot {
+  width: 7px;
+  height: 7px;
+  background: var(--surface);
+  border: 1.5px solid currentColor;
+  border-width: 1.5px;
+  color: var(--line-strong);
+}
+
+.tree-mlabel {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font: 700 14px/1.2 Georgia, "STZhongsong", "SimSun", serif;
+  color: var(--ink);
+}
+
+.tree-mrow--f .tree-mlabel {
+  font: 600 13px/1.2 Georgia, "STZhongsong", "SimSun", serif;
+}
+
+.tree-mcount {
+  flex: 0 0 auto;
+  font: 400 10px/1 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink-soft);
+}
+
+.tree-mplus {
+  flex: 0 0 auto;
+  margin-left: 2px;
+  font: 400 11px/1 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink-soft);
+}
+
+.tree-mbadge {
+  flex: 0 0 34px;
+  width: 34px;
+  margin-left: auto;
+  margin-right: 12px;
+  padding: 1px 0;
+  text-align: center;
+  font: 400 10px/1.4 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink-soft);
+  background: rgba(47, 93, 138, .07);
+  border-radius: 2px;
+}
+
+/* 移动端详情卡：卡头 + 手稿列表 */
+.tree-info--m {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  max-width: none;
+  max-height: calc(100% - 24px);
+  padding: 14px 14px 10px 16px;
+  overflow-y: auto;
+  background: var(--surface);   /* 盖住整片列表，97% 半透明会透出下面的行 */
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+/* 标题块不再有内层学科色竖条：外层 .graph-info 的 4px 印章红条是全站卡片语言，
+   再叠一条 4px 竖条是装饰重复。学科色改由 meta 行首 8px 圆点承载。 */
+.tree-info-head {
+  padding-left: 0;
+  border-left: none;
+}
+
+.tree-info-name {
+  font: 700 15px/1.35 Georgia, "STZhongsong", "SimSun", serif;
+  color: var(--ink);
+}
+
+.tree-info-sub {
+  margin-top: 3px;
+  font: 400 11px/1.4 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--ink-soft);
+}
+
+/* 学科色圆点：色相 + 学科名文字共同承载学科语义，不靠竖条。
+   8px 实心、无描边、圆点在 meta 行光学中线上。 */
+.tree-disc-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: -1px;
+  flex: none;
+}
+
+.tree-info--m .info-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.tree-mlist {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  max-height: 50vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+/* 比 .tree-info .info-list 的 168px 更具体，移动端卡内列表按 50vh */
+.tree-info .tree-mlist { max-height: 50vh; }
+
+.tree-mlist::-webkit-scrollbar { width: 6px; }
+.tree-mlist::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+.tree-mlist li {
+  border-top: 1px solid var(--line);
+}
+
+.tree-mlist li:first-child { border-top: none; }
+
+.tree-mlist a {
+  display: block;
+  min-height: 30px;
+  padding: 6px 2px;
+  font: 400 12px/1.35 Georgia, "STZhongsong", "SimSun", serif;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tree-mlist a:hover { text-decoration: none; color: var(--accent-2); }
+
+@media (max-width: 880px) and (min-width: 641px) {
+  .tree-frame { height: 560px; }
+  /* 横向内边距与 ≥881 档统一为 24px。否则 880→881 跨档时内容宽会突然掉 8px，
+     拖动窗口到 881 会看到整棵树横缩一下（列位是绝对值，只表现为右边距跳变）。 */
+  .tree-scroll { padding: 16px 24px; }
+}
+
+@media (max-width: 640px) {
+  .tree-frame {
+    height: 60vh;
+    max-height: 60vh;
+  }
+  .tree-scroll { padding: 16px; }
+  /* 让首行避开容器右上的「全部折叠」按钮（距顶 10 + 高 28） */
+  .tree-list { padding-top: 28px; }
+  .tree-collapse-btn { top: 10px; right: 12px; }
+  .tree-scroll::-webkit-scrollbar { width: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tree-row,
+  .tree-band,
+  .tree-link,
+  .tree-ring,
+  .tree-inner,
+  .tree-label--leaf,
+  .tree-mrow { transition: none !important; }
 }

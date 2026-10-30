@@ -47,8 +47,33 @@
       </div>
       <p class="graph-hint">共 <span id="graph-count">…</span>。未在 overview.tex 中登记的 31 篇手稿无 family 归属，显示为灰色散点。</p>
     </section>
+
+    <section id="tree" class="section">
+      <h2>二、学科树</h2>
+      <p class="section-desc">
+        同一批手稿按学科和问题族归成两层，从学科往下点，就能看到每个族里攒了哪几篇。
+        学科、族都可以展开收起，点手稿能拿到它在 GitHub 上的位置。
+      </p>
+      <div class="graph-controls tree-controls">
+        <input id="tree-search" type="text" placeholder="搜索手稿标题…" autocomplete="off" aria-label="搜索手稿标题">
+      </div>
+      <div class="cloud-frame tree-frame">
+        <div class="tree-scroll">
+          <svg id="tree-svg" role="tree" tabindex="0" aria-label="学科与问题族层级树"></svg>
+          <div id="tree-list" class="tree-list" role="tree" tabindex="0" aria-label="学科与问题族层级树" hidden></div>
+        </div>
+        <button id="tree-collapse-all" class="tree-collapse-btn" type="button">全部折叠</button>
+        <div id="tree-status" class="tree-status">正在载入 18 个学科 / 751 篇手稿…</div>
+        <div id="tree-info" class="graph-info tree-info" hidden></div>
+        <p id="tree-live" class="tree-live" role="status" aria-live="polite"></p>
+      </div>
+      <p class="graph-hint">
+        18 个学科、373 个问题族、751 篇手稿。其中 31 篇在 overview.tex 里没有登记族归属，直接挂在学科下面。
+      </p>
+    </section>
+
     <section id="overall" class="section">
-      <h2>二、全库词云</h2>
+      <h2>三、全库词云</h2>
       <p class="section-desc">
         语料是全部手稿的目录名加每篇的 README.md，去掉了停用词，合并了单复数。
         字号跟着词频走，颜色按词的主导学科上。
@@ -59,7 +84,7 @@
     </section>
 
     <section id="by-discipline" class="section">
-      <h2>三、分学科词云</h2>
+      <h2>四、分学科词云</h2>
       <p class="section-desc">
         仓库把 373 个问题族按数学学科分类。切换学科，看每个领域自己的行话。
       </p>
@@ -70,14 +95,14 @@
     </section>
 
     <section id="top-terms" class="section">
-      <h2>四、高频术语 Top 30</h2>
+      <h2>五、高频术语 Top 30</h2>
       <p class="section-desc">还是那 30 个词，换成直条，方便对照谁占大头。</p>
       <ol class="bar-list" id="bar-list"><!-- JS 填充 --></ol>
     </section>
 
 
     <section id="method" class="section">
-      <h2>五、分析与制图方法</h2>
+      <h2>六、分析与制图方法</h2>
       <div class="method-grid">
         <div class="method-card">
           <h3>语料</h3>
@@ -131,5 +156,6 @@
   <script src="js/d3.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/graph.js"></script>
+  <script src="js/tree.js"></script>
 </body>
 </html>

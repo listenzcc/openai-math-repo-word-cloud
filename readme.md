@@ -8,6 +8,8 @@ OpenAI 在 2026 年 10 月 6 日公开了内部模型产出的数学手稿仓库
 
 ---
 
+[toc]
+
 ## 仓库底账
 
 - **751** 篇手稿（`preprints/` 下 751 个目录，每个目录含 README.md、PDF 和构建说明）
@@ -26,13 +28,13 @@ Number theory、Algebra、Algebraic and complex geometry、Real and complex anal
 
 全库高频词前十名：
 
-| 词 | 频次 | | 词 | 频次 |
-|---|---|---|---|---|
-| conjecture | 163 | | uniform | 64 |
-| dimension | 96 | | model | 64 |
-| bound | 92 | | group | 57 |
-| finite | 84 | | one | 54 |
-| counterexample | 76 | | critical | 53 |
+| 词             | 频次 |     | 词       | 频次 |
+| -------------- | ---- | --- | -------- | ---- |
+| conjecture     | 163  |     | uniform  | 64   |
+| dimension      | 96   |     | model    | 64   |
+| bound          | 92   |     | group    | 57   |
+| finite         | 84   |     | one      | 54   |
+| counterexample | 76   |     | critical | 53   |
 
 `conjecture` 一骑绝尘，`counterexample` 排到第五。悬案被破了相当一批，也被证伪了一批，两类结果都进了仓库。这个分布和仓库定位（对开放研究问题做模型评估）是对得上的。
 
